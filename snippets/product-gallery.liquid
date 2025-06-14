@@ -1,0 +1,86 @@
+{% comment %} Check image logic {% endcomment %}
+{% assign feature_image = product.featured_image %}
+{% if product.selected_or_first_available_variant.image %}
+	{% assign feature_image = product.selected_or_first_available_variant.image %}
+{% endif %}
+{% assign gallery_class = '' -%}
+{% if settings.product_lightbox_enabled and product.images.size > 0 -%}
+	{% assign gallery_class = gallery_class | append: 'swiper-spotlight cursor-zoom-in' -%}
+{% endif %}
+{% include 'product-video' -%}
+<div class="product-gallery md:px-3 md:pt-6">
+
+<media-gallery >
+  <div id="GalleryMain-product-1" class="swiper gallery-main">
+	  <div class="card-product__badges absolute top-2 left-2 z-10 flex items-center gap-2">
+          {% include 'product-tag-promo', promo_index: 1 %}
+          {% if boolVideo %}
+            <span class="text-neutral-50">
+              <i class="icon icon-play"></i>
+            </span>
+          {% endif %}
+        </div>
+    <div class="swiper-wrapper h-inherit">
+		{{videoImg}}
+	   {% if product.images.size > 0  -%}
+      {% for image in product.images %}
+		
+        <div class="swiper-slide aspect-square h-inherit flex items-center justify-center relative {{ gallery_class }}" 
+			  data-src="{{ image.src }}"
+			 data-href="{{ image.src }}">
+           {% include 'product-frame' %}
+			<img
+            class="object-contain aspect-square scale-[var(--image-scale)] gallery-main-img"
+          	src="{{ image.src | img_url:'grande' }}"
+			 alt="{{ product.title }}"
+				 {% unless forloop.first %}
+				 loading="lazy"
+				 {% endunless %}
+          >
+        </div>
+      {% endfor %}
+		{% else -%}
+		 <div class="swiper-slide aspect-square h-inherit flex items-center justify-center relative {{ gallery_class }}" 
+			  data-src="{{ product.featured_image.src }}"
+			 data-href="{{ product.featured_image.src }}">
+           {% include 'product-frame' %}
+			<img
+            class="object-contain aspect-square scale-[var(--image-scale)] gallery-main-img"
+          	src="{{ product.featured_image.src | img_url:'grande' }}"
+			 alt="{{ product.title }}"
+				
+          >
+        </div>
+	{% endif -%}
+	  </div>
+	   {% if  product.images.size > 1  -%}
+	  <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+	  {% endif -%}
+  </div>
+{% if product.images.size > 1 and settings.product_thumb_enabled %}
+  <div id="GalleryThumbnails-product-1" class="swiper overflow-hidde text-center tec gallery-thumbnails mt-3 ">
+    <div class="swiper-wrapper gap-3 grid-flow-col h-auto inline-flex  ">
+	{% include 'product-video', is_thumb: true -%}
+      {{videoItem}}
+		 
+      {% for image in product.images %}
+        <div class="swiper-slide {%unless video_id %}{%if forloop.first%} swiper-slide-thumb-active {%endif%} {% endunless%}
+        cursor-pointer w-[6.1rem] md:w-[9rem]">
+            <div class=" flex items-center justify-center aspect-square ">
+          <img
+            class="object-contain w-auto"
+            src="{{ image.src | img_url:'small' }}"
+            width="64"
+            height="64"
+    			loading="lazy"
+          >
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+</media-gallery>
+
+</div>

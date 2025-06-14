@@ -1,0 +1,22 @@
+<div class="coupon-group px-5 py-3 border rounded-sm">
+          <div class="coupon-group-header mb-2">Mã giảm giá</div>
+			<portal-opener>	  
+          <div class="flex gap-3 " data-portal="#coupon-drawer">
+            <div class="inline-flex max-w-[calc(100%-4.2rem)] overflow-hidden items-center gap-3 cursor-pointer">
+              {%for i in (1..4)-%}
+				{% include 'coupon-configs' -%}
+			{%if show -%} 
+                <div class="coupon-group-item flex gap-2 items-center px-3 py-2 border border-neutral-50 rounded-sm bg-background">
+                  <i class="icon icon-ticket text-neutral-200"> </i>
+                  <div class="coupon-group-item__code font-semibold">{{ code }}</div>
+                </div>
+			{%endif-%}
+			{%endfor-%}
+          
+            </div>
+            <div class="px-3 py-2 border border-neutral-50 rounded-sm bg-background w-[3.6rem] h-[3.6rem]">
+              <i class="icon icon-carret-right text-neutral-200"> </i>
+            </div>
+          </div>
+			</portal-opener>
+        </div>

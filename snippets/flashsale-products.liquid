@@ -1,0 +1,50 @@
+<ega-carousel>
+	<script data-type="swiper-params" type="application/json">
+				{
+				  "speed": 1000,
+				  "spaceBetween": 12,
+				  "slidesPerView": 1.5,
+				  "breakpoints": {
+					"768": {
+					  "slidesPerView": 2.5
+					},
+					"1024": {
+					  "slidesPerView": 4.5
+					},
+					"1200": {
+					  "slidesPerView": 6
+					}
+				  }
+				}
+	</script>
+	{% assign is_empty_coll = false %}
+	{% if coll == blank or collections[coll] == blank or collections[coll].products_count == 0%}
+	{% assign is_empty_coll = true -%}
+	{% endif -%}
+	{% assign swiper_class = 'swiper ' -%}
+	{% if settings.flashsale_mobile_layout == 'two-column' -%}
+	{% assign swiper_class = 'swiper-desktop px-container' -%}  
+	{% assign mobile_layout = 'grid grid-cols-2 md:flex gap-gutter'-%}
+	{% endif -%}
+	{% if is_empty_coll -%}
+	{% assign swiper_class = '' -%} 
+	{% assign mobile_layout = ''-%}
+	{% endif -%} 	  
+	<div class="{{swiper_class}} container px-0 overflow-hidden md:py-[var(--spacing-10)]">
+		<div class=" swiper-wrapper grid md:grid-cols-4 {{mobile_layout}}  h-inherit  py-4  {% if is_empty_coll %} mx-auto lg:w-10/12 px-container {% endif %}">
+
+			{% if is_empty_coll %}
+			<div class="bg-transparent text-white p-4 swiper-slide mx-gutter">Sản phẩm đang được cập nhật...</div>
+			{% endif %}
+			{% assign quantityType =  settings.flashsale_quantity | default: 'tag' -%}
+			{% for product in collections[coll].products limit: settings.flashsale_coll_limit %}
+			<div class="relative h-inherit flashsale__item swiper-slide flex-shrink-0 flex-grow-0" >
+				{% include 'product-grid-item', product: product, is_flashsale: true, custom_class: 'h-full' %}
+			</div>
+			{% endfor %}
+		</div>
+		<div class="swiper-button-prev md:flex hidden"></div>
+		<div class="swiper-button-next  md:flex hidden"></div>
+	</div>
+
+</ega-carousel>

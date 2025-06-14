@@ -1,0 +1,363 @@
+<style>
+.location-card {
+  border: 2px solid #e80f0f;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(232, 15, 15, 0.08);
+  transition: box-shadow 0.3s, border-color 0.3s;
+  background: #fff;
+}
+.location-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(232, 15, 15, 0.16);
+  border-color: #b30000;
+}
+.location-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #e80f0f 0%, #ff4d4f 100%);
+  color: #fff;
+  border-bottom: 1px solid #ffeaea;
+}
+.location-number {
+  order: 2;
+  margin-left: 0;
+  margin-right: 0;
+  background: #fff;
+  color: #e80f0f;
+  border: 2px solid #e80f0f;
+}
+.location-info {
+  background: #fafafa;
+  border-radius: 0 0 16px 16px;
+}
+@media (max-width: 1023px) {
+  .location-card { margin-bottom: 24px; }
+}
+/* Bo góc ngoài cùng cho 2 card */
+.location-card:first-child { border-top-left-radius: 18px; border-bottom-left-radius: 18px; }
+.location-card:last-child { border-top-right-radius: 18px; border-bottom-right-radius: 18px; }
+/* Tạo khoảng trắng giữa 2 card */
+.store-locations .grid { background: #fff; padding: 0 8px; }
+/* Border mảnh hơn */
+.location-card { border-width: 1.5px; }
+/* Số showroom nổi bật hơn */
+.location-number {
+  font-size: 2.2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  box-shadow: 0 2px 8px 0 rgba(232, 15, 15, 0.08);
+}
+/* Tiêu đề showroom căn giữa */
+.store-locations h2 { margin-bottom: 2.5rem; text-align: center; }
+@media (min-width: 1024px) {
+  .store-locations .grid { padding-left: 0; padding-right: 0; }
+  .location-card:first-child { margin-right: 32px; }
+  .location-card:last-child { margin-left: 0; }
+}
+.location-header > div:not(.location-number) {
+  order: 1;
+}
+</style>
+
+<footer class="bg-background">
+  <div class="container">
+    <div
+      class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-x-gutter gap-y-6 pt-6 pb-3  md:pt-[var(--spacing-10)] md:pb-[var(--spacing-12)]"
+    >
+      <div class="footer-col">
+        {% if settings.fot_use_logo %}
+          <a class="footer-logo mb-3 block" href="/" title="logo {{ shop.name }}">
+            <img
+              class="object-contain"
+              loading="lazy"
+              src="{{ 'logo-footer.png'  | asset_url }}"
+              alt="logo {{ shop.name }}"
+              width="{{ settings.footer_logo_width }}"
+              height="{{ settings.footer_logo_height }}"
+            >
+          </a>
+        {% endif %}
+
+        {% if settings.fot_use_contact %}
+          <div class="contact-group mb-5">
+            <div class="flex gap-1 items-start mb-3">
+              <i class="icon icon-location text-neutral-200"></i>
+              <div class="">
+                <p class="text-forground">Địa chỉ</p>
+                <p class="font-semibold">
+                  {% if settings.address and settings.address != blank -%}
+                    <span>{{ settings.address }}</span>
+                  {% else %}
+                    <span>{{ shop.address }}, {{ shop.province }}, {{ shop.country }}</span>
+                  {% endif %}
+                </p>
+              </div>
+            </div>
+            <div class="xl:flex grid gap-2" style="column-gap: var(--spacing-8);">
+              <div class="flex gap-1 items-start">
+                <i class="icon icon-call text-neutral-200"></i>
+                <div class="">
+                  <p class="text-forground">Hotline</p>
+                  <a
+                    class="font-semibold text-primary link"
+                    href="tel:{{ settings.phone | default: shop.phone_number | remove: ' ' }}"
+                    title="{{ settings.phone | default: shop.phone_number | remove: ' ' }}"
+                  >
+                    {{- settings.phone | default: shop.phone_number -}}
+                  </a>
+                </div>
+              </div>
+              <div class="flex gap-1 items-start">
+                <i class="icon icon-sms text-neutral-200"></i>
+                <div class="">
+                  <p class="text-forground">Email</p>
+                  <a class="font-semibold link" href="mailto:{{ settings.email | default:shop.email }}"
+                    title="{{settings.emal | default: shop.email}}"
+                    >
+                    {{- settings.email | default: shop.email -}}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+
+        {% if settings.fot_use_social %}
+          <div class="social-icons">
+            <p class="font-semibold mb-3">{{ settings.fot_social_title }}</p>
+            {% include 'social-icons' %}
+          </div>
+        {% endif %}
+      </div>
+      <div class="footer-col" style="padding-left: 24px;">
+        <details open class="footer-details">
+          <summary class="text-base font-semibold mb-2 flex items-center justify-between">
+            {{ settings.fot_c2_title -}}
+            {% if linklists[settings.fot_c2_menu].links.size > 0 %}
+              <i class="icon icon-carret-right inline-block md:hidden"></i>
+            {% endif %}
+          </summary>
+          {% if linklists[settings.fot_c2_menu].links.size > 0 %}
+            <ul class="list-menu space-y-4  list-disc pl-5.5">
+              {% for link in linklists[settings.fot_c2_menu].links %}
+                <li class="li_menu">
+                  <a class="link" href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </details>
+      </div>
+      <div class="footer-col" style="padding-left: 30px;">
+        <details open class="footer-details">
+          <summary class="text-base font-semibold mb-2 flex items-center justify-between">
+            {{ settings.fot_c3_title }}
+            {% if linklists[settings.fot_c3_menu].links.size > 0 %}
+              <i class="icon icon-carret-right inline-block md:hidden"></i>
+            {% endif %}
+          </summary>
+          {% if linklists[settings.fot_c3_menu].links.size > 0 %}
+            <ul class="list-menu space-y-4  list-disc pl-5.5">
+              {% for link in linklists[settings.fot_c3_menu].links %}
+                <li class="li_menu">
+                  <a class="link" href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </details>
+        <div class="mt-6">
+          <p class="text-base font-semibold mb-2">
+            {{ settings.subs_fot_hotline_group_title }}
+          </p>
+          <ul class=" list-menu space-y-4  list-disc pl-5.5">
+            {% if settings.subs_fot_hotline_1_text != blank %}
+              <li>
+                <a title="{{ settings.subs_fot_hotline_1_text }}" class="link" href="tel:{{ settings.subs_fot_hotline_1_num }}">
+                  {{ settings.subs_fot_hotline_1_text }}
+                </a>
+              </li>
+            {% endif %}
+            {% if settings.subs_fot_hotline_2_text != blank %}
+              <li>
+                <a   title="{{ settings.subs_fot_hotline_2_text }}"  class="link" href="tel:{{ settings.subs_fot_hotline_2_num }}">
+                  {{ settings.subs_fot_hotline_2_text }}
+                </a>
+              </li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+      <div class="footer-col">
+        {% if settings.subs_fot_subscribe_enabled %}
+          {% include 'subcribe-email' %}
+        {% endif %}
+        {% if settings.subs_fot_payment_enabled %}
+          <div class="trust-badges mt-6">
+            <p class="font-semibold mb-3">{{ settings.subs_fot_payment_title }}</p>
+            <a href="{{ settings.subs_fot_payment_link }}" title="{{ settings.subs_fot_payment_title }}" target="_blank">
+              <img
+                class="h-auto"
+                src="{{ 'footer-trustbadge.png' | asset_url | img_url: 'grande' }}"
+                alt=""
+                width="246"
+                height="53"
+                loading="lazy"
+              >
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Thêm phần bản đồ Google Maps - SHOWROOM -->
+    <div class="store-locations mt-8 border-t border-neutral-50 pt-8">
+      <h2 class="text-center text-xl font-bold mb-8">HỆ THỐNG SHOWROOM</h2>
+      <div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-12">
+        <!-- Showroom 1 -->
+        <div class="location-card shadow-lg rounded-lg overflow-hidden bg-white">
+          <div class="location-header bg-blue-600 text-white px-6 py-4 flex items-center">
+            <div class="location-number w-12 h-12 bg-white text-blue-600 rounded-full flex items-center justify-center font-bold text-xl mr-4">1</div>
+            <div>
+              <h3 class="text-lg font-bold">Showroom bán hàng</h3>
+              <p class="font-medium">TỈNH BẮC GIANG</p>
+            </div>
+          </div>
+          
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.098519219359!2d106.10473757586925!3d21.26756747953256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31350d0dfb171189%3A0x5ccf1bc89e5fec9c!2zSGltIExhbSBDb21wdXRlciAtIEjhuqNpIENow6J1IDExLCBQaMO6IE3hu4V1IDEsIEJh4bq_IEJhbmcsIEJh4bq_IEJhbmcsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1746518005405!5m2!1svi!2s"
+              width="100%" 
+              height="250" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          
+          <div class="location-info p-6">
+            <p class="address mb-4 flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-neutral-500 mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span>Số 101 Thân Nhân Trung, TDP Dục Quang, P. Bích Động, TX Việt Yên, Bắc Giang</span>
+            </p>
+            
+            <p class="phone mb-3 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-neutral-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <span>Hotline mua hàng: <a href="tel:0347.288.399" class="font-semibold text-primary hover:underline">0347.288.399</a></span>
+            </p>
+            
+            <p class="warranty mb-3 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-neutral-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              <span>Hotline bảo hành: <a href="tel:0347.288.399" class="font-semibold text-primary hover:underline">0347.288.399</a></span>
+            </p>
+            
+            <p class="email mb-3 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-neutral-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span>Email: <a href="mailto:himlamcomputerltd@gmail.com" class="font-semibold text-primary hover:underline">himlamcomputerltd@gmail.com</a></span>
+            </p>
+            
+            <p class="hours flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-neutral-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>Thời gian làm việc: 8h00 - 20h</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Showroom 2 -->
+        <div class="location-card shadow-lg rounded-lg overflow-hidden bg-white">
+          <div class="location-header bg-blue-600 text-white px-6 py-4 flex items-center">
+            <div class="location-number w-12 h-12 bg-white text-blue-600 rounded-full flex items-center justify-center font-bold text-xl mr-4">2</div>
+            <div>
+              <h3 class="text-lg font-bold">Showroom bán hàng</h3>
+              <p class="font-medium">TỈNH BẮC NINH</p>
+            </div>
+          </div>
+          
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.965990915623!2d106.14722287586709!3d21.15375168347263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31350b00124938a9%3A0x97424e0accd8c2ac!2sHim%20Lam%20Computer%20-%20Qu%E1%BA%BF%20V%C3%B5!5e0!3m2!1sen!2s!4v1746518062879!5m2!1sen!2s" 
+              width="100%" 
+              height="250" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          
+          <div class="location-info p-6">
+            <p class="address mb-4 flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-neutral-500 mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span>Số 98 Khu 1, P. Phố Mới, TX. Quế Võ, Bắc Ninh</span>
+            </p>
+            
+            <p class="phone mb-3 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-neutral-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <span>Hotline mua hàng: <a href="tel:0347.288.399" class="font-semibold text-primary hover:underline">0347.288.399</a></span>
+            </p>
+            
+            <p class="warranty mb-3 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-neutral-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              <span>Hotline bảo hành: <a href="tel:0347.288.399" class="font-semibold text-primary hover:underline">0347.288.399</a></span>
+            </p>
+            
+            <p class="email mb-3 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-neutral-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span>Email: <a href="mailto:himlamcomputerltd@gmail.com" class="font-semibold text-primary hover:underline">himlamcomputerltd@gmail.com</a></span>
+            </p>
+            
+            <p class="hours flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-neutral-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>Thời gian làm việc: 8h00 - 20h</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copyright border-t border-neutral-50 py-3 text-center text-neutral-300 grid gird-cols-1 md:grid-cols-[1fr_auto] items-center">
+     {%assign copyrightName = "EGANY"-%}
+        {%assign copyrightUrl = "https://egany.com"-%}
+        
+        {%capture copyrightContent-%}
+            © Bản quyền thuộc về <a class="font-semibold link" href="{{copyrightUrl-}}" title="{{ copyrightName  }}" rel="nofollow" target="_blank">{{copyrightName-}}</a>
+        {%endcapture-%}
+        
+        {%if settings.copyright_content != "" and settings.copyright_content != _blank-%}
+            {%assign copyrightContent = settings.copyright_content-%}
+        {%endif-%}
+        
+       
+		{% if settings.logo_bct_enabled -%}
+		<a href="{{settings.logo_bct_url}} "  rel="nofollow"  target="_blank">
+			<img src="{{ 'logo-bct.png' | asset_url | img_url: 'medium' }}" loading="lazy" width="102" height="32" />
+		</a>
+		{% endif -%}
+    </div>
+  </div>
+</footer>

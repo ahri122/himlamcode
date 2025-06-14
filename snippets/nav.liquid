@@ -1,0 +1,831 @@
+<style>
+  .nav-icon {
+    width: 24px !important;
+    height: 24px !important;
+    margin-bottom: 5px;
+    display: inline-block !important;
+    filter: brightness(0) invert(1);
+    object-fit: contain;
+  }
+  
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    padding: 12px 15px;
+    text-align: center;
+    height: 60px;
+  }
+
+  .nav-item span {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .nav-item:hover {
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+  }
+
+  .navigation-wrapper.sub-header {
+    min-height: 60px;
+    padding: 0;
+    background-color: #ff0000;
+  }
+
+  .navigation-wrapper .flex.justify-between.items-center {
+    min-height: 60px;
+    align-items: center;
+  }
+
+  .navigation-header {
+    padding: 0 !important;
+  }
+
+  .main-menu-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 17px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    height: 60px;
+  }
+
+  .main-menu-title .icon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .main-menu-title .icon span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+  }
+
+  .main-menu-title:hover {
+    opacity: 0.9;
+  }
+
+  .navigation-header.relative {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .menu-toggle span {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  /* Icon cho menu toggle */
+  .menu-toggle::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url('{{ "icon-menu.png" | asset_url }}');
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: brightness(0) invert(1);
+  }
+
+  .header-action-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 15px;
+    color: white;
+    text-decoration: none;
+    height: 60px;
+  }
+
+  .header-action-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+    filter: brightness(0) invert(1);
+  }
+
+  .header-action-item span {
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 5px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  /* Thêm style riêng cho BUILD CẤU HÌNH PC */
+  .header-action-item[href*="build-pc"] span {
+    font-weight: 700;
+  }
+
+  .header-action-item:hover {
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+  }
+
+  /* Style cho nút Build PC */
+  .header-action-item.store-group {
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-action-item.store-group:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  }
+
+  .header-action-item.store-group span {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  /* Style cho Build PC button */
+  .build-pc-btn {
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 15px;
+  }
+  
+  .build-pc-btn:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  }
+
+  /* Style cho submenu */
+  .menu-item {
+    position: relative;
+  }
+
+  .submenu {
+    position: absolute;
+    top: calc(100% - 10px);
+    left: 0;
+    background: white;
+    min-width: 250px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    border-radius: 12px;
+    padding-top: 10px;
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .menu-item:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    display: block;
+  }
+
+  .submenu::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: transparent;
+  }
+
+  .submenu__list {
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+    background: white;
+    border-radius: 12px;
+  }
+
+  .submenu__item {
+    padding: 0;
+    position: relative;
+  }
+
+  .submenu__item .link {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: none;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .submenu__item .link:hover {
+    color: #ff0000;
+    background-color: rgba(255, 0, 0, 0.05);
+    transform: translateX(5px);
+    font-weight: 800;
+  }
+
+  .submenu__item--main > .link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    margin-bottom: 4px;
+    text-transform: none;
+    font-size: 0.95rem;
+    color: #222;
+  }
+
+  .submenu__item ul .submenu__item .link {
+    padding-left: 35px;
+    font-size: 0.9rem;
+    opacity: 0.85;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .submenu__item ul .submenu__item .link:hover {
+    opacity: 1;
+    transform: translateX(5px);
+    font-weight: 800;
+  }
+
+  /* Style cho nút Build PC và các menu chính */
+  .header-action-item.store-group span,
+  .nav-item span {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .header-action-item.store-group:hover,
+  .nav-item:hover {
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+  }
+
+  /* Style cho menu drawer */
+  .portal.portal--drawer {
+    position: fixed;
+    top: 0;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    z-index: 1000;
+  }
+
+  .portal.portal--drawer .portal-dialog {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+  }
+
+  .portal.portal--drawer .portal-inner {
+    position: relative;
+    width: 300px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    margin-top: 10px;
+  }
+
+  .portal.portal--drawer .portal-inner::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 20px;
+    width: 16px;
+    height: 16px;
+    background: white;
+    transform: rotate(45deg);
+    box-shadow: -3px -3px 5px rgba(0,0,0,0.04);
+  }
+
+  /* Style cho menu items trong drawer */
+  .menu-drawer .navigation-header {
+    padding: 15px !important;
+    border-bottom: 1px solid #eee;
+  }
+
+  .menu-drawer .header-icon-group {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .menu-drawer .header-icon {
+    background: #f5f5f5;
+  }
+
+  .menu-drawer .icon {
+    width: 24px;
+    height: 24px;
+    color: #666;
+  }
+
+  /* Style cho danh sách menu */
+  .menu-drawer .menu-list {
+    padding: 10px 0;
+  }
+
+  .menu-drawer .menu-item {
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .menu-drawer .menu-item:hover {
+    background: rgba(0,0,0,0.03);
+  }
+
+  .menu-drawer .menu-item i {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    color: #666;
+  }
+
+  /* Animation cho menu */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .portal.portal--drawer .portal-inner {
+    animation: slideIn 0.2s ease;
+  }
+
+  /* Style cho submenu trong menu drawer */
+  .menu-drawer .menu-item {
+    position: relative;
+  }
+
+  .menu-drawer .submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 250px;
+    background: white;
+    box-shadow: 4px 4px 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+  }
+
+  .menu-drawer .menu-item:hover > .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .menu-drawer .submenu__list {
+    padding: 10px 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .menu-drawer .submenu__item {
+    padding: 8px 20px;
+    white-space: nowrap;
+  }
+
+  .menu-drawer .submenu__item .link {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: all 0.2s ease;
+  }
+
+  .menu-drawer .submenu__item .link:hover {
+    color: #ff0000;
+    transform: translateX(5px);
+  }
+
+  /* Thêm mũi tên cho menu item có submenu */
+  .menu-drawer .menu-item.has-submenu > a::after {
+    content: '›';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #666;
+  }
+
+  /* Style cho submenu trong menu drawer */
+  .navigation-vertical .menu-item {
+    position: relative !important;
+  }
+
+  .navigation-vertical .submenu {
+    position: absolute !important;
+    top: 0 !important;
+    left: 100% !important;
+    min-width: 280px;
+    background: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(10px);
+    transition: all 0.2s ease;
+    z-index: 1001;
+    padding: 12px 0;
+    margin-left: 2px;
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .navigation-vertical .menu-item:hover > .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    display: block;
+  }
+
+  .navigation-vertical .submenu__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background: white;
+  }
+
+  .navigation-vertical .submenu__item {
+    padding: 0;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  .navigation-vertical .submenu__item .link {
+    color: #444;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    padding: 8px 20px;
+    text-transform: none;
+    font-weight: normal;
+  }
+
+  .navigation-vertical .submenu__item .link:hover {
+    color: #ff0000;
+    background-color: rgba(255,0,0,0.04);
+    transform: none;
+  }
+
+  .navigation-vertical .submenu__item--main > .link {
+    font-weight: 600;
+    color: #000;
+    font-size: 14px;
+    text-transform: none;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    margin-bottom: 5px;
+    background: rgba(0,0,0,0.02);
+  }
+
+  .navigation-vertical .submenu__item--main > .link:hover {
+    background: rgba(255,0,0,0.04);
+  }
+
+  .navigation-vertical .submenu__item ul {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 220px;
+    background: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(10px);
+    transition: all 0.2s ease;
+    padding: 8px 0;
+    margin-left: 2px;
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .navigation-vertical .submenu__item:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    display: block;
+  }
+
+  .navigation-vertical .submenu__item ul .submenu__item .link {
+    font-size: 13px;
+    padding: 8px 20px;
+    color: #555;
+  }
+
+  /* Thêm mũi tên cho menu item có submenu */
+  .navigation-vertical .menu-item .menu-item__link i.icon-carret-right {
+    margin-left: auto;
+    font-size: 10px;
+    opacity: 0.4;
+    transition: all 0.2s ease;
+  }
+
+  .navigation-vertical .menu-item:hover .menu-item__link i.icon-carret-right {
+    opacity: 0.8;
+    transform: translateX(3px);
+  }
+
+  /* Đảm bảo menu không bị ẩn bởi overflow */
+  .navigation-vertical {
+    overflow: visible !important;
+  }
+
+  .navigation-vertical .main-menu {
+    overflow: visible !important;
+  }
+
+  .main-menu-title span {
+    white-space: nowrap;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  @media (max-width: 1440px) {
+    .main-menu-title span {
+      font-size: 15px;
+    }
+    .main-menu-title {
+      padding: 17px 10px;
+    }
+  }
+
+  /* Tăng font-size cho các menu con của thanh menu đỏ */
+  .submenu__item .link,
+  .submenu__item--main > .link,
+  .submenu__item--main > ul .submenu__item .link {
+    font-size: 12px !important;
+  }
+
+  @media (min-width: 1024px) {
+    .menu-drawer .menu-item {
+      position: relative;
+    }
+    .menu-drawer .submenu {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      min-width: 220px;
+      max-width: 320px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      z-index: 100;
+      padding: 8px 0;
+      border-radius: 8px;
+      border: 1px solid #eee;
+      overflow-x: auto;
+    }
+    .menu-drawer .menu-item:hover > .submenu,
+    .menu-drawer .menu-item:focus-within > .submenu {
+      display: block;
+    }
+  }
+
+  /* Style cho desktop */
+  @media (min-width: 992px) {
+    .portal.portal--drawer .portal-inner,
+    .menu-drawer {
+      width: 30% !important;
+      max-width: none !important;
+      min-width: 0 !important;
+      background: #fff;
+      box-shadow: none;
+      border-radius: 0;
+    }
+    
+    /* Thêm các style khác cho desktop */
+    .portal.portal--drawer .portal-dialog {
+      width: 100%;
+    }
+    
+    .portal.portal--drawer {
+      width: 100%;
+    }
+    
+    .menu-drawer .menu-item {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .menu-drawer .navigation-footer,
+    .menu-drawer .navigation-header {
+      width: 100%;
+    }
+  }
+
+  /* Style cho mobile */
+  @media (max-width: 991px) {
+    .portal-inner,
+    .menu-drawer {
+      width: 80vw !important;
+      max-width: 100vw !important;
+      min-width: 0 !important;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      border-radius: 0;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      height: 100vh !important;
+      overflow-y: auto;
+      z-index: 9999;
+    }
+    /* ... các style mobile khác ... */
+  }
+</style>
+
+<div class="navigation-wrapper hidden xl:flex items-center sub-header">
+  <div class="container relative">
+    <div class="grid {%if linklists[settings.main_menu]%}grid-cols-[3fr_9fr]{%endif%} gap-2">
+      <div class="navigation-header relative w-full py-3.5 {%unless linklists[settings.main_menu]%}hidden{%endunless%}">
+        {%if linklists[settings.main_menu]%}
+        <portal-opener>
+          <div class="main-menu-title hidden xl:flex" data-portal="#menu-drawer">
+            <div class="icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <span>DANH MỤC SẢN PHẨM</span>
+          </div>
+        </portal-opener>
+        {%endif-%}
+        <menu-drawer class="portal portal--drawer" id="menu-drawer" data-type="drawer" data-animation="slide-in-left">
+          <dialog class="portal-dialog">
+            <div class="portal-overlay"></div>
+            <div class="portal-inner animation bg-background h-full grid grid-rows-[auto_1fr_auto]">
+              <div class="navigation-header pt-4 flex justify-between items-center border-b pb-3 border-neutral-50 px-4">
+               {%if shop.customer_accounts_enabled %}
+			 <a href="{% if customer%}/account{%else%}/account/login{%endif%}" 
+				title="{% if customer%}{{customer.name}}{%else%}Đăng nhập{%endif%}" 
+				class="header-icon-group flex gap-2 items-center account-group  hover:bg-neutral-50 active:scale-95 transition-all duration-150 px-2 py-1 rounded-sm ">
+                  <div class="header-icon w-[3.6rem] h-[3.6rem] p-2 rounded-sm flex items-center justify-center border border-neutral-50">
+                    <i class="icon icon-user"></i>
+                  </div>
+                  <div class=" ">
+                    <span class="text-xs">Tài khoản</span>
+                    <span class="font-semibold block" >Đăng nhập</span>
+                  </div>
+                </a>
+				{% endif %}
+                <button
+                  type="button"
+                  id="PortalClose-menu-crawer"
+                  class="w-[3.2rem] h-[3.2rem] rounded-full border border-neutral-50 text-neutral-200 flex items-center justify-center active:scale-95 transition-transform hover:bg-neutral-50"
+                >
+                  <i class="icon icon-cross"> </i>
+                </button>
+              </div>
+         		{% include 'main-nav' %}
+              <div class="navigation-footer 4 border-t border-neutral-50 flex">
+				    {%if settings.header_location_enabled  %}
+                <div class="{%if settings.header_hotline_enabled  %}w-1/2{%else%}w-full{% endif %}">
+                  <a
+                    href="https://himlamcomputer.vn/pages/build-pc"
+                    title="Build cấu hình PC"
+                    class="header-action-item store-group"
+                  >
+                    <div class="header-icon w-[3.6rem] h-[3.6rem] p-2 rounded-sm flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <rect x="3" y="4" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                        <path d="M8 20h8M12 16v4" stroke="currentColor" stroke-width="2"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <span class="text-base font-bold">BUILD CẤU HÌNH PC</span>
+                    </div>
+                  </a>
+                </div>
+				  {% endif %}
+			  {%if settings.header_hotline_enabled %}
+				  {% assign phone =  settings.header_hotline_link | remove: ' ' %}
+					{% if phone == blank %}
+						{% assign phone =  settings.phone | default: shop.phone_number | remove: ' ' %}
+					{% endif %}
+                <div class="{%if settings.header_location_enabled  %}w-1/2{%else%}w-full{% endif %}">
+                  <a
+                    class="header-action-item"
+                    href="tel:{{ phone }}"
+                    title="{{ phone }}"
+                  >
+                    <img src="{{ 'icon-phone.png' | asset_url }}" alt="Hotline" class="header-action-icon">
+                    <span>{{ settings.header_hotline_title }}</span>
+                  </a>
+                </div>
+				{% endif %}
+              </div>
+            </div>
+          </dialog>
+        </menu-drawer>
+      </div>
+      <div class="flex justify-between items-center">
+		  {% if settings.sub_menu and settings.sub_menu_enabled -%}
+        {% include 'sub-nav' %}
+		  {%else %}
+		  <div></div>
+		  {% endif %}
+        <div class="flex gap-[var(--spacing-8)] whitespace-nowrap ">
+			{%if settings.header_location_enabled %}
+          <a
+            href="https://himlamcomputer.vn/pages/build-pc"
+            title="Build cấu hình PC"
+              class="header-action-item"
+          >
+              <img src="{{ 'icon-build-pc.png' | asset_url }}" alt="Build PC" class="header-action-icon">
+              <span class="font-semibold">BUILD CẤU HÌNH PC</span>
+          </a>
+		{% endif %}
+			{%if settings.header_hotline_enabled %}
+			{% assign phone =  settings.header_hotline_link | remove: ' ' %}
+			{% if phone == blank %}
+				{% assign phone =  settings.phone | default: shop.phone_number | remove: ' ' %}
+			{% endif %}
+          <a
+              class="header-action-item"
+            href="tel:{{ phone }}"
+            title="{{ phone }}"
+          >
+              <img src="{{ 'icon-phone.png' | asset_url }}" alt="Hotline" class="header-action-icon">
+              <span>{{ settings.header_hotline_title }}</span>
+          </a>
+		{% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
