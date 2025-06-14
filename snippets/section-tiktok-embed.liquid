@@ -1,0 +1,63 @@
+{% if settings.tiktok_embed_code != blank %}
+  <style>
+    .section-tiktok-embed {
+      margin-top: 40px;
+    }
+
+    .banner-container {
+      background-color: #FF0000;
+      background-image: url({{ 'tiktok-embed-bg.jpg' | asset_url }});
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 20px 0;
+    }
+
+    .tiktok-wrapper {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+      height: 460px; /* 👈 Giới hạn chiều cao */
+      overflow: hidden;
+      position: relative;
+    }
+
+    .tiktok-embed-container {
+      transform: scale(0.8); /* 👈 Thu nhỏ toàn bộ video */
+      transform-origin: top center;
+    }
+
+    .tiktok-embed {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 auto !important;
+    }
+
+    .tiktok-embed iframe {
+      width: 100% !important;
+      border: none !important;
+    }
+
+    @media (max-width: 767px) {
+      .tiktok-wrapper {
+        height: 440px;
+      }
+
+      .tiktok-embed-container {
+        transform: scale(0.88);
+      }
+    }
+  </style>
+
+  <section class="section section-tiktok-embed">
+    <div class="banner-container container relative"> <!-- 👈 container giúp thu lề hai bên -->
+      <div class="flex justify-center items-center h-full">
+        <div class="tiktok-wrapper">
+          <div class="tiktok-embed-container">
+            {{ settings.tiktok_embed_code | raw }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}

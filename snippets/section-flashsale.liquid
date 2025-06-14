@@ -1,0 +1,110 @@
+<style>
+  /* Ẩn hoàn toàn pseudo-element :before */
+  .section-flashsale:before {
+    display: none !important;
+  }
+  
+  /* Ẩn hoàn toàn pseudo-element :after (nếu có) */
+  .section-flashsale:after {
+    display: none !important;
+  }
+  
+  /* Chỉnh sửa container chính để bo tròn đều các góc */
+  .flashsale-background {
+    border-radius: 1.5rem !important;
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+  
+  /* Đảm bảo không có phần nào bị tràn ra ngoài */
+  .section-flashsale {
+    overflow: hidden !important;
+  }
+</style>
+
+{% assign coll = settings.flashsale_coll %}
+{% capture flashsale_id %}section-flashsale-0{% endcapture %}
+{% capture coll_custom_style %}
+--color-flashsale-bg: {{ settings.flashsale_bg | default: '#01049E' }};
+--color-flashsale-timer-bg: {{ settings.flashsale_timer_bg | default: '#01049E' }};
+--color-flashsale-timer: {{ settings.flashsale_timer_color | default: '#fff' }};
+--color-flashsale-process: {{ settings.flashsale_process_background | default: '#01049E' }};
+{% endcapture %}
+
+{% include 'section-styles', key: 'flashsale', custom_style: coll_custom_style  %}
+<section
+  class="section section-flashsale {%if is_landing_page %} landing-page-section {% endif %} relative {%unless is_landing_page %} overflow-hidden {% endunless %} w-full"
+  id="{{ flashsale_id }}"
+  style="{{ section_style }}"
+  
+>
+<flashsale-section data-not-started="{{settings.flashsale_not_started_action}}" data-id="{{ flashsale_id }}" data-ended="{{settings.flashsale_ended_action}}"
+   {%if settings.flashsale_random_order_enabled  %} data-random="true" {% endif %}
+				   >
+  <div class="max-w-full w-full  ">
+	  <div class="container">
+		   <div class="flex  flex-wrap lg:flex-nowrap items-center justify-center md:justify-between w-full xl:w-10/12  mx-auto mb-4 gap-3 md:gap-4">
+      <div class="flex items-center gap-2 md:gap-3">
+        <img
+          src="{{ 'flashsale-icon.png' | asset_url }}"
+          alt="{{ settings.flashsale_title }}"
+          width="48"
+          height="48"
+          class="h-auto"
+        >
+        {% if settings.flashsale_title != blank -%}
+          <h2 class="text-h4 text-center lg:text-h1 text-primary font-bold flashsale-heading">
+            {%assign flashSaleUrl = collections[coll].url-%}
+            {%if settings.flashsale_url != ""-%}
+              {%assign flashSaleUrl = settings.flashsale_url-%}
+            {%endif-%}
+            <a href="{{flashSaleUrl-}}" title="{{settings.flashsale_title}}">
+              {{ settings.flashsale_title -}}
+            </a>
+          </h2>
+        {% endif -%}
+      </div>
+		{% if settings.flashsale_timer_enabled -%}
+			{% include 'countdown-timer', prefix: 'flashsale' %}
+		{% endif -%}
+    </div>
+	  </div>
+   {% unless is_landing_page -%}
+   
+    <div class="relative items-start py-[var(--spacing-5-5)]  lg:py-0  lg:mx-0 mx-[calc(var(--container-padding)*-1)]">
+      <div
+        class="flashsale-background w-full h-full xl:w-10/12 absolute top-0 left-0 lg:left-1/2 lg:top-1/2   lg:-translate-x-1/2  lg:-translate-y-1/2 bg-[var(--color-flashsale-bg)] z-0 lg:rounded-[2.4rem]"
+      ></div>
+      <div class="overflow-hidden lg:px-0 px-[var(--container-padding)]">
+		{% include 'flashsale-products' -%} 
+      </div>
+    </div>
+    {% comment %} Do not hide flash sale news 	  {% endcomment %}
+
+    <div class="flashsale-news  hidden xl:block min-h-[7rem] w-11/12 mx-auto mt-[var(--spacing-8)]">
+			
+    </div>
+	  {% else -%}
+	  <div class="container md:py-6">
+		   {% assign is_empty_coll = false %}
+		   {% if coll == blank or collections[coll] == blank or collections[coll].products_count == 0%}
+			 {% assign is_empty_coll = true -%}
+		  {% endif -%}
+		  
+          {% if is_empty_coll %}
+            <div class="p-4  mx-gutter">Sản phẩm đang được cập nhật...</div>
+		  {% else -%}
+		  <div class="grid grid-cols-2 lg:grid-cols-4 gap-gutter">
+			  	  {% for product in collections[coll].products  %}
+              {% include 'product-grid-item', product: product, is_flashsale: true %}
+          {% endfor %}
+		  </div>
+	
+          {% endif %}
+	  </div>
+	  {% endunless -%}
+  </div>
+ 
+</flashsale-section>
+
+</section>

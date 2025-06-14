@@ -1,0 +1,51 @@
+{% if settings.sub_menu and settings.sub_menu_enabled -%}
+  <div class="flex gap-[var(--spacing-8)] whitespace-nowrap">
+    {% for link in linklists[settings.sub_menu].links %}
+      {% assign icon_name = "" %}
+      {% case link.title %}
+        {% when "MÁY TÍNH ĐỂ BÀN" %}
+          {% assign icon_name = "icon-desktop.png" %}
+        {% when "MẸO CÔNG NGHỆ" %}
+          {% assign icon_name = "icon-tips.png" %}
+        {% when "THIẾT BỊ CÔNG NGHỆ" %}
+          {% assign icon_name = "icon-device.png" %}
+        {% when "GÓI DỰ ÁN" %}
+          {% assign icon_name = "icon-project.png" %}
+      {% endcase %}
+
+      <div class="menu-item group relative">
+        <a href="{{ link.url }}" class="nav-item">
+          {% if icon_name != "" %}
+            <img src="{{ icon_name | asset_url }}" alt="{{ link.title }}" class="nav-icon" style="width: 24px; height: 24px;">
+          {% endif %}
+          <span>{{ link.title }}</span>
+        </a>
+
+        {% if linklists[link.handle].links.size > 0 -%}
+          <div class="submenu">
+            <ul class="submenu__list">
+              {% for childlink in linklists[link.handle].links %}
+                <li class="submenu__item submenu__item--main">
+                  <a class="link" href="{{ childlink.url }}" title="{{ childlink.title }}">
+                    {{- childlink.title -}}
+                  </a>
+                  {% if linklists[childlink.handle] %}
+                    <ul>
+                      {% for childlink2 in linklists[childlink.handle].links %}
+                        <li class="submenu__item">
+                          <a class="link" href="{{ childlink2.url }}" title="{{ childlink2.title }}">
+                            {{- childlink2.title -}}
+                          </a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif -%}
+      </div>
+    {% endfor %}
+  </div>
+{% endif -%}

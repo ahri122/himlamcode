@@ -1,0 +1,31 @@
+{% include 'breadcrumb' %} 
+
+ 
+{% include 'section-main-product' %}
+{% if settings.related_product_enabled %}
+{% include 'section-related-products' %}
+{% endif %}
+{% if settings.equalprice_product_enabled %}
+{% include 'section-equalprice-products' %}
+{% endif %}
+
+{% if settings.product_recent_viewed_enabled %}
+{% include 'section-recent-products' %}
+{% endif %}
+<script>
+function setProductRecent() {
+	try {
+		let productUrl = '{{ product.id }}';
+		let storage = JSON.parse(localStorage.getItem('EGA:recentProduct')) || [];
+		if (storage && !storage.includes(productUrl)) {
+			storage = [productUrl].concat(storage);
+			storage.length > 8 && storage.pop();
+			localStorage.setItem('EGA:recentProduct', JSON.stringify(storage));
+		}
+	} catch (e) {
+		console.log(e);
+	}
+}
+setProductRecent();
+
+</script>

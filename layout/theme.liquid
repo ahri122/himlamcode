@@ -1,0 +1,1188 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="vi">
+  <!-- <![endif] -->
+  <head>
+    <meta charset="utf-8">
+    <!--[if IE]> <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' /> <![endif]-->
+    <!--[if lt IE 9]> <script src="//hstatic.net/0/0/global/design/theme-default/html5shiv.js"></script> <![endif]-->
+    <!--
+      <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="revisit-after" content="1 day">
+    <meta name="HandheldFriendly" content="true">
+    <link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" type="image/png">
+    <title>
+      {{ page_title | strip_newlines | strip_html | escape }}
+      {% if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif %}
+      {% if current_page != 1 %} &ndash; Page {{ current_page }}{% endif %}
+      {% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+    </title>
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="alternate" href="{{ canonical_url }}" hreflang="vi-vn">
+    <meta name="keywords" content="{{ shop.name }}">
+    {%- if template contains 'article' -%}
+      {%- if robots contains 'noindex' or robots contains 'nofollow' -%}
+        <meta name="robots" content="{{ robots }}">
+      {%- endif -%}
+    {%- endif -%}
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="{{shop.url}}">
+    <link rel="dns-prefetch" href="//hstatic.net">
+    <link rel="dns-prefetch" href="//theme.hstatic.net/">
+    <link rel="dns-prefetch" href="//product.hstatic.net/">
+    <link rel="dns-prefetch" href="//file.hstatic.net/">
+    <link rel="dns-prefetch" href="//www.google-analytics.com/">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com/">
+    <link rel="dns-prefetch" href="//www.google.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.facebook.com">
+    <link rel="dns-prefetch" href="//connect.facebook.net">
+    <link rel="dns-prefetch" href="//static.ak.facebook.com">
+    <link rel="dns-prefetch" href="//static.ak.fbcdn.net">
+    <link rel="dns-prefetch" href="//s-static.ak.facebook.com">
+    <link rel="preconnect" href="https://egany.com">
+    <link rel="preconnect" href="https://egany.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+
+    <!-- Thêm thư viện Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Thêm file ega-carousel.js -->
+    <script src="{{ 'ega-carousel.js' | asset_url }}" defer></script>
+
+    {% if template contains 'product' and product.images.size > 0 -%}
+      <link rel="preload" as="image" href="{{ product.images[0].src | img_url:'large'  }}">
+    {% endif -%}
+    {% include 'head-scripts' -%}
+    {% include 'head-styles' -%}
+    {% include 'fb-open-graph-tags' %}
+    {% include 'seo-head' %}
+
+    {%- capture capserverHead- %}{{ content_for_header }}{%- endcapture -%}
+    {%- assign serverHead = capserverHead -%}
+
+    {%- capture capsrcCombo1 -%}"https://combo-omni.haravan.com/js/script_tag_production.js?v=1576487994026"{%- endcapture -%}
+    {%- assign srcCombo1 = capsrcCombo1 -%}
+    {%- capture capsrcCombo2 -%}"https://combo-omni.haravan.com/js/script_tag_production.js?v=1576487994026",{%- endcapture -%}
+    {%- capture capsrcCombo3 -%},"https://combo-omni.haravan.com/js/script_tag_production.js?v=1576487994026"{%- endcapture -%}
+    {%- assign srcCombo2 = capsrcCombo2 -%}
+    {%- assign srcCombo3 = capsrcCombo3 -%}
+
+    {%- capture capsrcBuyXY1 -%}"https://buyxgety-omni.haravan.com/js/script_tag_production.js?v=1576487994026"{%- endcapture -%}
+    {%- assign srcBuyXY1 = capsrcBuyXY1 -%}
+    {%- capture capsrcBuyXY2 -%}"https://buyxgety-omni.haravan.com/js/script_tag_production.js?v=1576487994026",{%- endcapture -%}
+    {%- capture capsrcBuyXY3 -%},"https://buyxgety-omni.haravan.com/js/script_tag_production.js?v=1576487994026"{%- endcapture -%}
+    {%- assign srcBuyXY2 = capsrcBuyXY2 -%}
+    {%- assign srcBuyXY3 = capsrcBuyXY3 -%}
+
+    {%- capture capsrcBuy2Get1_1 -%}"https://promotionsme-apps.haravan.com/api/buyer/script_tag/buy2get1"{%- endcapture -%}
+    {%- assign srcBuy2Get1_1 = capsrcBuy2Get1_1 -%}
+    {%- capture capsrcBuy2Get1_2 -%}"https://promotionsme-apps.haravan.com/api/buyer/script_tag/buy2get1",{%- endcapture -%}
+    {%- capture capsrcBuy2Get1_3 -%},"https://promotionsme-apps.haravan.com/api/buyer/script_tag/buy2get1"{%- endcapture -%}
+    {%- assign srcBuy2Get1_2 = capsrcBuy2Get1_2 -%}
+    {%- assign srcBuy2Get1_3 = capsrcBuy2Get1_3 -%}
+
+    {%- capture capsrcCombo_final1 -%}"https://combo-omni.haravan.com/js/script_tag_production.js?v=1003"{%- endcapture -%}
+    {%- assign srcCombo_final1 = capsrcCombo_final1 -%}
+
+    {%- capture capsrcBuyXY_final1 -%}"https://buyxgety-omni.haravan.com/js/script_tag_production.js?v=1002"{%- endcapture -%}
+    {%- assign srcBuyXY_final1 = capsrcBuyXY_final1 -%}
+
+    {%- capture capsrcBuy2Get1_final1 -%}"https://promotionsme-apps.haravan.com/api/buyer/script_tag/buy2get1"{%- endcapture -%}
+    {%- assign srcBuy2Get1_final1 = capsrcBuy2Get1_final1 -%}
+
+    {%- if settings.promotion_hrvapp_use -%}
+      {%- if settings.promotion_hrvapp == 'appcombo' -%}
+        {%- capture srcHead -%}{{ serverHead | remove: srcBuyXY2 | remove: srcBuyXY3 | remove: srcBuy2Get1_2 | remove: srcBuy2Get1_3 }}{%- endcapture -%}
+        {{ srcHead }}
+      {%- elsif settings.promotion_hrvapp == 'appbuyxgety' -%}
+        {%- capture srcHead -%}{{ serverHead | remove: srcCombo2 | remove: srcCombo3 | remove: srcBuy2Get1_2 | remove: srcBuy2Get1_3 }}{%- endcapture -%}
+        {{ srcHead }}
+      {%- elsif settings.promotion_hrvapp == 'appbuy2get1' -%}
+        {%- capture srcHead -%}{{ serverHead | remove: srcBuyXY2 | remove: srcBuyXY3 | remove: srcCombo2 | remove: srcCombo3  }}{%- endcapture -%}
+        {{ srcHead }}
+      {%- endif -%}
+    {%- else -%}
+	{{ serverHead | remove: srcBuyXY2 | remove: srcBuyXY3 | remove: srcCombo2 | remove: srcCombo3 | remove: srcBuy2Get1_2 | remove: srcBuy2Get1_3 }}
+    {%- endif -%}
+		<!--
+	Theme Information
+	--------------------------------------
+	Theme ID: EGA Gear
+	Version: v1.1.0_20240605
+	Company: EGANY
+	changelog: {{ "ega-changelog.js"| asset_url }}
+	---------------------------------------
+	-->
+    <script type="application/ld+json" defer>
+      {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "{{shop.url | remove: 'https://' | remove: 'http://' }}",
+        "url": "{{shop.url}}",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "{{shop.url}}/search?&q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+    {% comment %}
+      <!-- Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      																											new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      														})(window,document,'script','dataLayer','GTM-NP8HFM8');</script>
+      <!-- End Google Tag Manager -->
+    {% endcomment %}
+<style>
+/* CSS cho layout với 2 banner dọc */
+.main-content-wrapper {
+  width: 85%; /* Thu hẹp nội dung chính để tạo khoảng trống cho banner */
+  max-width: 1500px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Style cho các banner dọc - chỉnh lại theo buildpc.html */
+.side-banner {
+  position: fixed;
+  top: 120px;
+  width: 140px;
+  z-index: 1000;
+  height: auto; /* Bỏ chiều cao 100vh */
+  max-height: none; /* Bỏ giới hạn chiều cao tối đa */
+}
+
+.left-banner {
+  left: 10px;
+}
+
+.right-banner {
+  right: 10px;
+}
+
+.side-banner img {
+  width: 100%;
+  height: auto; /* Sửa thành auto thay vì 64% */
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  object-fit: initial; /* Bỏ object-fit: cover */
+  object-position: initial; /* Bỏ object-position: top */
+}
+
+@media (max-width: 1200px) {
+  .side-banner {
+    display: none;
+  }
+  .main-content-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Đảm bảo menu vẫn hoạt động tốt */
+header, 
+.top-banner, 
+.mobile-menu-icon,
+.header-main,
+.menu-toggle,
+.hamburger-menu,
+nav.main-nav,
+.dropdown-menu {
+  z-index: 10 !important; /* Đảm bảo menu hiển thị trên banner */
+  position: relative;
+}
+
+/* Style cho thanh menu bên trái */
+.menu-toggle {
+  display: flex;
+  align-items: center;
+  background-color: #f00;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle i, 
+.menu-toggle .fa-bars {
+  margin-right: 8px;
+}
+
+/* Đảm bảo dropdown menu hiển thị đúng */
+.categories-menu {
+  position: relative;
+  z-index: 100;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  min-width: 250px;
+  z-index: 999;
+}
+
+.categories-menu:hover .dropdown-menu,
+.menu-toggle:hover + .dropdown-menu,
+.dropdown-menu:hover {
+  display: block;
+}
+
+/* Hiệu ứng bóng kính khi hover vào sản phẩm */
+.product-card, 
+.product-grid-item,
+.product-item,
+.product-block {
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.product-card:hover,
+.product-grid-item:hover,
+.product-item:hover,
+.product-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Hiệu ứng bóng kính */
+.product-card:hover::before,
+.product-grid-item:hover::before,
+.product-item:hover::before,
+.product-block:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Thêm hiệu ứng cho nút mua hàng */
+.product-card .btn-cart,
+.product-grid-item .btn-cart,
+.product-item .btn-cart,
+.product-block .btn-cart,
+.add-to-cart-btn,
+.atc-btn {
+  transition: all 0.3s ease;
+}
+
+.product-card:hover .btn-cart,
+.product-grid-item:hover .btn-cart,
+.product-item:hover .btn-cart,
+.product-block:hover .btn-cart,
+.product-card:hover .add-to-cart-btn,
+.product-grid-item:hover .add-to-cart-btn,
+.product-item:hover .add-to-cart-btn,
+.product-block:hover .add-to-cart-btn,
+.product-card:hover .atc-btn,
+.product-grid-item:hover .atc-btn,
+.product-item:hover .atc-btn,
+.product-block:hover .atc-btn {
+  background-color: #ff4d4d;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* CSS để header và nav tràn full màn hình */
+header, 
+.navigation-wrapper,
+.full-width-nav {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+
+header .container,
+.navigation-wrapper .container,
+.full-width-nav .container {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 160px;
+  padding-right: 160px;
+  box-sizing: border-box;
+}
+
+.header-wrapper,
+.sub-header > .container > .grid {
+  width: 100% !important;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.navigation-wrapper {
+  background-color: #e80f0f !important; /* Đảm bảo menu màu đỏ */
+}
+
+/* Đảm bảo cả header và nav đều tràn full màn hình */
+.full-width-header {
+  width: 100vw;
+  max-width: 100%;
+  overflow: visible;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+/* Style cho full-width-nav */
+.full-width-nav {
+  width: 100vw;
+  max-width: 100%;
+  overflow: visible;
+  position: relative;
+  left: 0;
+  right: 0;
+  background-color: #e80f0f;
+}
+
+@media (max-width: 1200px) {
+  header .container,
+  .navigation-wrapper .container,
+  .full-width-nav .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* CSS hiệu ứng mùa hè */
+.summer-effect {
+  display: none;
+}
+
+/* Hiệu ứng sóng nhiệt mùa hè */
+.hot-summer-effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 222, 89, 0.05));
+  z-index: 3;
+  pointer-events: none;
+}
+
+.hot-spot {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    rgba(255, 169, 40, 0.15) 0%,
+    rgba(255, 169, 40, 0.05) 40%,
+    transparent 70%
+  );
+  top: -300px;
+  right: -200px;
+  z-index: 2;
+  pointer-events: none;
+  animation: sun-pulse 15s infinite ease-in-out;
+}
+
+@keyframes sun-pulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.2);
+  }
+}
+
+.heat-mirage {
+  position: fixed;
+  width: 100%;
+  height: 150px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.03), transparent);
+  z-index: 2;
+  pointer-events: none;
+  filter: url(#wave-filter);
+  animation: heat-wave 8s infinite ease-in-out;
+}
+
+@keyframes heat-wave {
+  0%, 100% {
+    opacity: 0.4;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(-5px);
+  }
+}
+
+.shimmer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.01),
+    rgba(255, 255, 255, 0.02) 20px,
+    rgba(255, 180, 50, 0.03) 40px,
+    rgba(255, 255, 255, 0.01) 60px
+  );
+  animation: shimmer-move 60s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes shimmer-move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Xóa bỏ các hiệu ứng cũ */
+.rain-container, .rain-drop, .sparkle {
+  display: none !important;
+}
+
+/* css menu */
+.navigation-vertical ul li:nth-child(9) .submenu {
+  top: -424px !important;
+}
+
+/* Live Chat Widget */
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chat-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+.chat-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.chat-button:hover .chat-icon {
+    transform: scale(1.1);
+}
+
+.chat-notification {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ff4444;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 2s infinite;
+    border: 2px solid white;
+    font-weight: bold;
+}
+
+.chat-window {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 350px;
+    height: 450px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.chat-window.active {
+    display: flex;
+    animation: slideUp 0.3s ease;
+}
+
+.chat-header {
+    background: #0676da;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chat-header-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.support-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.avatar-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.support-info h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.support-info p {
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.chat-close {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+.chat-close:hover {
+    transform: rotate(90deg);
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f8f9fa;
+    scroll-behavior: smooth;
+}
+
+.chat-input-area {
+    padding: 15px;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 10px;
+    background: white;
+}
+
+.chat-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.chat-input:focus {
+    border-color: #0676da;
+}
+
+.send-button {
+    background: #0676da;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.send-button:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}
+
+.message {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message.user {
+    align-items: flex-end;
+}
+
+.message.support {
+    align-items: flex-start;
+}
+
+.message-content {
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.message.user .message-content {
+    background: #0676da;
+    color: white;
+    border-bottom-right-radius: 5px;
+}
+
+.message.support .message-content {
+    background: white;
+    color: #333;
+    border-bottom-left-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.message-time {
+    font-size: 11px;
+    color: #999;
+    margin-top: 5px;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 68, 68, 0.4);
+    }
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(255, 68, 68, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 68, 68, 0);
+    }
+}
+
+/* Add this to the existing CSS section */
+.typing-indicator {
+    display: flex;
+    gap: 4px;
+    padding: 4px 8px;
+}
+
+.typing-indicator span {
+    width: 8px;
+    height: 8px;
+    background: #90a4ae;
+    border-radius: 50%;
+    animation: typing 1s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes typing {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+    50% {
+        transform: translateY(-4px);
+        opacity: 1;
+    }
+}
+</style>
+
+  <!-- SVG Filters cho hiệu ứng sóng nhiệt -->
+  <svg style="display: none;">
+    <defs>
+      <filter id="wave-filter">
+        <feTurbulence type="fractalNoise" baseFrequency="0.01 0.05" numOctaves="2" seed="1" result="turbulence">
+          <animate attributeName="baseFrequency" 
+                   dur="60s" 
+                   values="0.01 0.05;0.02 0.06;0.01 0.05" 
+                   repeatCount="indefinite"/>
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="10" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- Add OpenAI API key and chat initialization -->
+  <script>
+  // Khởi tạo biến global để kiểm tra trạng thái load
+  window.isChatIntegrationLoaded = false;
+
+  // Khởi tạo API key
+  window.OPENAI_API_KEY = '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';
+
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('Đang chờ ChatGPT integration load...');
+    
+    const checkIntegration = setInterval(() => {
+      if (window.chatGPTIntegration) {
+        window.isChatIntegrationLoaded = true;
+        clearInterval(checkIntegration);
+        console.log('Chat GPT integration đã load xong');
+        
+        // Kiểm tra API key
+        if (!window.OPENAI_API_KEY) {
+          console.error('API key chưa được cấu hình!');
+          const messagesContainer = document.querySelector('.chat-messages');
+          if (messagesContainer) {
+            messagesContainer.innerHTML += `
+              <div class="message support">
+                <div class="message-content">
+                  ⚠️ Hệ thống chat AI đang gặp sự cố. 
+                  Bạn vui lòng liên hệ qua hotline 0347.288.399 để được hỗ trợ nhé!
+                </div>
+                <span class="message-time">${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+              </div>
+            `;
+          }
+        }
+      }
+    }, 100);
+  });
+  </script>
+
+  <!-- Add the chatgpt-integration.js script -->
+  <script src="{{ 'chatgpt-integration.js' | asset_url }}" defer></script>
+
+    
+  </head>
+  <body
+    class="ega-theme"
+    itemscope
+    itemtype="http://schema.org/Website"
+  >
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+      document.getElementById('intro-screen').style.display = 'none';
+    }, 3000); // 3000ms = 3 giây
+    
+    // Các đoạn mã khác nếu cần
+  });
+</script>
+
+   
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const flagContainer = document.getElementById('flag-container');
+  const menu = document.querySelector('.portal-dialog');
+
+  // Hàm kiểm tra và ẩn/hiện cờ
+  function updateFlagVisibility() {
+    if (menu && menu.classList.contains('open')) {
+      flagContainer.style.display = 'none';
+    } else {
+      flagContainer.style.display = 'block';
+    }
+  }
+
+  // Theo dõi sự thay đổi class của menu
+  if (menu) {
+    const observer = new MutationObserver(updateFlagVisibility);
+    observer.observe(menu, { attributes: true, attributeFilter: ['class'] });
+  }
+
+  // Gọi lần đầu để đảm bảo đúng trạng thái
+  updateFlagVisibility();
+});
+</script>
+    {% comment %}
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NP8HFM8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+    {% endcomment %}
+    
+    <!-- Banner dọc - chỉnh lại giống buildpc.html -->
+    <div class="side-banner left-banner">
+      <img src="{{ 'banner-l.jpg' | asset_url }}" alt="Banner trái" />
+    </div>
+    
+    <!-- HEADER FULL WIDTH -->
+    <div class="full-width-header">
+      {% include 'header' %}
+    </div>
+    
+    <!-- Nội dung chính -->
+    <div class="main-content-wrapper">
+      {% include 'top-banner' %} 
+      <main>
+        {{ content_for_layout }}
+      </main>
+      {% include 'bpr-products-module' %}
+      {% include 'footer' %} 
+      {% include 'sales-pop' %} 
+      {% include 'addthis-sharing' %} 
+      {% include 'mobile-cro-buttons' %} 
+      {% include 'search-drawer' %} 
+      {% include 'quickview' %} 
+      {% include 'cart-drawer' %} 
+      {% include 'coupon-drawer' %} 
+      {% include 'compare-qv' %} 
+      {% include 'promo-popup' %} 
+      {% include 'error-popup' %} 
+    </div>
+    
+    <!-- Banner phải -->
+    <div class="side-banner right-banner">
+      <img src="{{ 'banner-r.jpg' | asset_url }}" alt="Banner phải" />
+    </div>
+
+	<script src="{{ 'main.js' | asset_url }}" ></script>
+{% if template contains 'collection' -%}
+	<script src="{{ 'collection.js' | asset_url }}" defer fetchPriority="low"></script>
+{% endif -%}
+	<script src="{{ 'product.js' | asset_url }}" defer   fetchPriority="low"></script>
+	<script src="{{ 'cart.js' | asset_url }}" defer   fetchPriority="low"></script>
+	<script src="{{ 'flashsale.js' | asset_url }}" defer   fetchPriority="low"></script>
+	<script src="{{ 'coupon.js' | asset_url }}" defer   fetchPriority="low"></script>
+
+	<script src="{{ 'defer-scripts.js' | asset_url }}" defer  fetchPriority="low" ></script>
+    {% include 'hrv-apps' -%}
+  
+
+    <!-- Tooltip toàn cục cho sản phẩm -->
+<div id="tooltip" class="global-tooltip" style="
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  z-index: 9999;
+  width: 320px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+  transition: all 0.2s ease;
+">
+  <div class="tooltip-name font-semibold text-red-600 mb-2"></div>
+  <div class="tooltip-description text-sm text-gray-800 leading-relaxed"></div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const tooltip = document.getElementById("tooltip");
+
+  document.querySelectorAll(".card-product").forEach((card) => {
+    card.addEventListener("mouseenter", function () {
+      const title = card.querySelector(".card-product__title")?.innerText || "Sản phẩm";
+
+      // Tìm phần mô tả sản phẩm (dựa vào class hoặc phần có nội dung mô tả cấu hình)
+      const descriptionHTML = card.querySelector(".desc, .product-description, .card-product__desc")?.innerHTML || "";
+
+      // Dùng regex đơn giản để trích cấu hình
+      const extract = (label) => {
+        const regex = new RegExp(`${label}\\s*:?\\s*(.*?)<`, "i");
+        const match = descriptionHTML.match(regex);
+        return match ? match[1].trim() : "Đang cập nhật";
+      };
+
+      const cpu = extract("Bộ vi xử lý|CPU");
+      const ram = extract("Bộ nhớ trong|RAM");
+      const ssd = extract("Ổ cứng|SSD");
+      const vga = extract("VGA|Card đồ họa");
+      const screen = extract("Màn hình");
+
+      const description = `
+        <ul class="list-disc pl-4 mb-2">
+          <li><strong>CPU:</strong> ${cpu}</li>
+          <li><strong>RAM:</strong> ${ram}</li>
+          <li><strong>SSD:</strong> ${ssd}</li>
+          <li><strong>Card:</strong> ${vga}</li>
+          <li><strong>Màn hình:</strong> ${screen}</li>
+        </ul>
+      `;
+
+      tooltip.querySelector(".tooltip-name").innerText = title;
+      tooltip.querySelector(".tooltip-description").innerHTML = description;
+
+      const rect = card.getBoundingClientRect();
+      tooltip.style.left = rect.right + 12 + "px";
+      tooltip.style.top = rect.top + window.scrollY + "px";
+      tooltip.style.display = "block";
+    });
+
+    card.addEventListener("mouseleave", function () {
+      tooltip.style.display = "none";
+    });
+  });
+});
+</script>
+
+
+
+  </body>
+  
+</html>
+
+<!-- Update the chat widget HTML -->
+<div class="chat-widget">
+    <button class="chat-button" onclick="toggleChat()">
+        <img src="{{ 'robot.png' | asset_url }}" alt="AI Chat" class="chat-icon">
+        <span class="chat-notification">1</span>
+    </button>
+    
+    <div class="chat-window">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="support-avatar">
+                    <img src="{{ 'robot.png' | asset_url }}" alt="AI Avatar" class="avatar-icon">
+                </div>
+                <div class="support-info">
+                    <h3>AI Hỗ trợ khách hàng</h3>
+                    <p>Trực tuyến</p>
+                </div>
+            </div>
+            <button class="chat-close" onclick="toggleChat()">×</button>
+        </div>
+        
+        <div class="chat-messages">
+            <div class="message support">
+                <div class="message-content">
+                    Chào bạn! 👋 Mình là trợ lý AI của Him Lam Computer. 
+
+Mình có thể giúp bạn:
+- Tư vấn chọn máy tính, linh kiện
+- Xây dựng cấu hình PC theo ngân sách
+- Giải đáp thắc mắc về bảo hành
+
+Bạn cần mình hỗ trợ gì nào? 😊
+                </div>
+                <span class="message-time">{{ 'now' | date: '%H:%M' }}</span>
+            </div>
+        </div>
+        
+        <div class="chat-input-area">
+            <input type="text" class="chat-input" placeholder="Nhập tin nhắn..." onkeypress="handleKeyPress(event)">
+            <button class="send-button" onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Add this to your existing CSS -->
+<style>
+.typing-indicator {
+    display: flex;
+    gap: 4px;
+    padding: 4px 8px;
+}
+
+.typing-indicator span {
+    width: 8px;
+    height: 8px;
+    background: #90a4ae;
+    border-radius: 50%;
+    animation: typing 1s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes typing {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+    50% {
+        transform: translateY(-4px);
+        opacity: 1;
+    }
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f8f9fa;
+    scroll-behavior: smooth;
+}
+
+.message.support.typing .message-content {
+    background: #f1f3f5;
+    padding: 8px;
+}
+
+.support-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.avatar-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+  
+</style>
+
+<!-- Add this before the closing body tag -->
+<script>
+function toggleChat() {
+    const chatWindow = document.querySelector('.chat-window');
+    chatWindow.classList.toggle('active');
+    
+    // Xóa notification khi mở chat
+    const notification = document.querySelector('.chat-notification');
+    if (chatWindow.classList.contains('active')) {
+        notification.style.display = 'none';
+    }
+
+    // Reset chat history khi đóng chat
+    if (!chatWindow.classList.contains('active') && window.chatGPTIntegration) {
+        window.chatGPTIntegration.resetChatHistory();
+    }
+}
+
+async function sendMessage() {
+    const input = document.querySelector('.chat-input');
+    const message = input.value.trim();
+    
+    if (message) {
+        // Xóa input
+        input.value = '';
+        
+        if (window.isChatIntegrationLoaded && window.chatGPTIntegration) {
+            // Nếu đã load xong thì dùng integration
+            await window.chatGPTIntegration.handleChatMessage(message);
+        } else {
+            // Nếu chưa load xong thì hiển thị tin nhắn tạm thời
+            await sendMessageTemp(message);
+            console.log('ChatGPT integration chưa sẵn sàng');
+        }
+    }
+}
+
+function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+        sendMessage();
+    }
+}
+
+// Kiểm tra khi integration đã load xong
+document.addEventListener('DOMContentLoaded', function() {
+    const checkIntegration = setInterval(() => {
+        if (window.chatGPTIntegration) {
+            window.isChatIntegrationLoaded = true;
+            clearInterval(checkIntegration);
+            console.log('Chat GPT integration đã load xong');
+        }
+    }, 100);
+});
+
+// Hàm gửi tin nhắn tạm thời khi chưa load xong integration
+async function sendMessageTemp(message) {
+    const messagesContainer = document.querySelector('.chat-messages');
+    const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    
+    // Hiển thị tin nhắn của người dùng
+    messagesContainer.innerHTML += `
+        <div class="message user">
+            <div class="message-content">${message}</div>
+            <span class="message-time">${currentTime}</span>
+        </div>
+    `;
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+}
+</script>
+

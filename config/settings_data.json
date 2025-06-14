@@ -1,0 +1,2708 @@
+{
+
+"current": {
+
+
+"favicon_enable": true,
+
+
+"logo_use_image": true,
+
+
+"social_facebook_link": "https://www.facebook.com/himlamcom",
+
+
+"social_youtube_link": "https://www.youtube.com/@himlamcom",
+
+
+"social_tiktok_link": "https://www.tiktok.com/@himlamltd?lang=vi-VN",
+
+
+"social_instagram_link": "",
+
+
+"social_zalo_link": "https://zalo.me/0347288399",
+
+
+"fot_use_logo": true,
+
+
+"footer_logo_width": "172",
+
+
+"footer_logo_height": "44",
+
+
+"address": "CÔNG TY TNHH CÔNG NGHỆ HIM LAM COMPUTER <br>\nMST/ĐKKD/QĐTL: 2400988123<br>\nThôn Châu Sơn, Xã Ngọc Châu, Huyện Tân Yên, Bắc Giang\n<br>\nVăn Phòng : Số 162 Ngõ 553 Đ. Giải Phóng, P. Giáp Bát, Q, Hoàng Mai, Hà Nội  <br>\nCơ Sở 1 : Số 101 Thân Nhân Trung, TDP Dục Quang, P. Bích Động, TX Việt Yên, Bắc Giang <br>\nCơ Sở 2 : Số 98 Khu 1, P. Phố Mới, TX. Quế Võ, Bắc Ninh",
+
+
+"phone": "0347288399",
+
+
+"email": "himlamcomputerltd@gmail.com",
+
+
+"fot_use_contact": true,
+
+
+"fot_use_social": true,
+
+
+"fot_social_title": "Mạng xã hội",
+
+
+"fot_c2_title": "Hỗ Trợ Khách Hàng",
+
+
+"fot_c2_menu": "left",
+
+
+"fot_c3_title": "Chính sách",
+
+
+"fot_c3_menu": "footer",
+
+
+"subs_fot_hotline_group_title": "Tổng đài hỗ trợ",
+
+
+"subs_fot_hotline_1_num": "0347288399",
+
+
+"subs_fot_hotline_2_num": "0347288399",
+
+
+"subs_fot_hotline_1_text": "Gọi mua hàng: <b>0347288399</b> (8h-20h)",
+
+
+"subs_fot_hotline_2_text": "Gọi bảo hành: <b>0347288399</b> (8h-20h)",
+
+
+"subs_fot_subscribe_enabled": true,
+
+
+"subs_fot_subscribe_desc": "Bạn muốn nhận khuyến mãi đặc biệt? Đăng kí tham gia ngay cộng động hơn 1.500+ người theo dõi của chúng tôi để cập nhật khuyến mãi ngay lập tức",
+
+
+"subs_fot_subscribe_title": "Đăng ký nhận ưu đãi",
+
+
+"subs_fot_payment_enabled": true,
+
+
+"subs_fot_payment_title": "PHƯƠNG THỨC THANH TOÁN",
+
+
+"subs_fot_payment_link": "/",
+
+
+"home_slider_autoplay": true,
+
+
+"home_slider_1_enabled": true,
+
+
+"home_slider_2_enabled": true,
+
+
+"home_slider_3_enabled": true,
+
+
+"home_side_banner_1_enabled": true,
+
+
+"home_side_banner_3_enabled": true,
+
+
+"home_side_banner_2_enabled": true,
+
+
+"policies_margin": "-15px 20px",
+
+
+"policies_1_enabled": true,
+
+
+"policies_1_title": "GIAO HỎA TỐC",
+
+
+"policies_1_text": "Hà Nội - Bắc Ninh - Bắc Giang Trong 2H",
+
+
+"policies_2_title": "TRẢ GÓP DỄ DÀNG",
+
+
+"policies_2_text": "Hỗ trợ vay với lãi suất thấp",
+
+
+"policies_2_enabled": true,
+
+
+"policies_3_enabled": true,
+
+
+"policies_3_title": "DEAL HOT BÙNG NỔ",
+
+
+"policies_3_text": "Flash sale giảm giá cực sốc ",
+
+
+"policies_4_enabled": true,
+
+
+"policies_4_title": "MIỄN PHÍ LẮP ĐẶT",
+
+
+"policies_4_text": "Bảo hành tận nhà, 1 đổi 1 trong vòng 30 ngày",
+
+
+"coll_per_row": "8",
+
+
+"coll_color_bg": "",
+
+
+"coll_1_enabled": true,
+
+
+"coll_2_enabled": true,
+
+
+"coll_4_enabled": true,
+
+
+"coll_6_enabled": true,
+
+
+"coll_8_enabled": true,
+
+
+"coll_9_enabled": true,
+
+
+"coll_11_enabled": true,
+
+
+"coll_12_enabled": true,
+
+
+"coll_15_enabled": true,
+
+
+"coll_14_enabled": true,
+
+
+"coll_13_enabled": true,
+
+
+"coll_16_enabled": true,
+
+
+"coll_10_enabled": true,
+
+
+"coll_7_enabled": true,
+
+
+"coll_3_enabled": true,
+
+
+"coll_1_title": "PC GAMING",
+
+
+"coll_2_title": "CPU",
+
+
+"coll_5_enabled": true,
+
+
+"coll_margin": "64px 64px",
+
+
+"coll_margin_mb": "32px 32px",
+
+
+"coupon_button_color": "#ee1926",
+
+
+"coupon_text_color": "#0056e7",
+
+
+"coupon_1_enabled": true,
+
+
+"coupon_1_text": "Mã: HIMLAMWEBMOI",
+
+
+"coupon_1_date": "30/05/2025",
+
+
+"coupon_2_enabled": false,
+
+
+"coupon_1_desc": "Giảm 200k vào trực tiếp giá sản phẩm khi mua bộ PC Build sẵn trên web",
+
+
+"coupon_2_desc": "Giảm 15% cho đơn hàng giá trị tối thiểu 500k. Mã giảm tối đa 150K",
+
+
+"coupon_2_text": "Mã: CHAOXUANATTY ",
+
+
+"coupon_2_code": "CHAOXUANATTY",
+
+
+"coupon_2_date": "10/02/2025",
+
+
+"coupon_1_time": "23:59:59",
+
+
+"coupon_1_code": "HIMLAMWEBMOI",
+
+
+"banner_group_1_enabled": true,
+
+
+"banner_group_1_background": "#417505",
+
+
+"banner_group_1_color": "#ffffff",
+
+
+"banner_group_1_title": "GAMING GEAR GIẢM TỚI 30%",
+
+
+"banner_group_1_text": "bàn phím máy tính",
+
+
+"banner_group_1_link": "/collections/ban-phim-may-tinh-1",
+
+
+"banner_group_2_background": "#9013fe",
+
+
+"banner_group_2_color": "#ffffff",
+
+
+"banner_group_2_title": "ƯU ĐÃI HỌC SINH, SINH VIÊN GIẢM TỚI 14%",
+
+
+"banner_group_2_text": "Laptop học tập, Màn hình máy tính",
+
+
+"banner_group_2_link": "/collections/laptop-van-phong-1",
+
+
+"banner_group_2_enabled": true,
+
+
+"banner_group_3_enabled": true,
+
+
+"banner_group_3_background": "#f5a623",
+
+
+"banner_group_3_title": "GIẢM 500K CHO ĐƠN TỪ 6TR",
+
+
+"banner_group_3_text": "Laptop Gaming",
+
+
+"banner_group_3_link": "/collections/laptop-gaming-1",
+
+
+"banner_group_3_color": "#ffffff",
+
+
+"banner_group_margin": "40px 40px",
+
+
+"banner_group_margin_mb": "20px 20px",
+
+
+"hot_banner_enabled": true,
+
+
+"hot_banner_alt": "Banner ngang",
+
+
+"hot_banner_link": "/",
+
+
+"hot_banner_margin": "64px 64px",
+
+
+"hot_banner_margin_mb": "32px 32px",
+
+
+"brand_items_display": "10",
+
+
+"brand_1_enabled": true,
+
+
+"brand_1_alt": "brand-1",
+
+
+"brand_1_link": "/search?q=KINGSTON&type=product",
+
+
+"brand_2_enabled": true,
+
+
+"brand_3_enabled": true,
+
+
+"brand_4_enabled": true,
+
+
+"brand_5_enabled": true,
+
+
+"brand_6_enabled": true,
+
+
+"brand_7_enabled": true,
+
+
+"brand_8_enabled": true,
+
+
+"brand_9_enabled": false,
+
+
+"brand_10_enabled": false,
+
+
+"brand_11_enabled": false,
+
+
+"brand_12_enabled": false,
+
+
+"brand_13_enabled": true,
+
+
+"brand_14_enabled": true,
+
+
+"brand_15_enabled": false,
+
+
+"brand_16_enabled": false,
+
+
+"brand_margin": "64px 64px",
+
+
+"brand_margin_mb": "32px 32px",
+
+
+"use_reviews": true,
+
+
+"use_hover_change_image": true,
+
+
+"quickview_enable": true,
+
+
+"add_cart_enable": true,
+
+
+"addtocart_bg_color": "#ee1926",
+
+
+"product_tabs_1_title": "PC GAMING CUSTOM",
+
+
+"product_tabs_1_url": "san-pham-noi-bat",
+
+
+"product_tabs_1_limit": "18",
+
+
+"product_tabs_1_tab_1_enabled": true,
+
+
+"product_tabs_1_tab_1_title": "PC GAMING INTEL",
+
+
+"product_tabs_1_tab_1_coll": "pc-gaming-intel-1",
+
+
+"product_tabs_1_tab_2_enabled": true,
+
+
+"product_tabs_1_tab_2_title": "PC GAMING AMD",
+
+
+"product_tabs_1_tab_2_coll": "pc-gaming-amd-1",
+
+
+"product_tabs_1_tab_3_enabled": false,
+
+
+"product_tabs_1_tab_3_title": "",
+
+
+"product_tabs_1_tab_3_coll": "",
+
+
+"section_blogs_limit": "4",
+
+
+"section_blogs_tab_1_enabled": true,
+
+
+"section_blogs_tab_1_title": "MẸO CÔNG NGHỆ",
+
+
+"section_blogs_tab_1_url": "news",
+
+
+"section_blogs_tab_2_enabled": false,
+
+
+"section_blogs_tab_2_title": "Kinh nghiệm, mẹo vặt",
+
+
+"section_blogs_title": "BẢN TIN CÔNG NGHỆ",
+
+
+"section_blogs_url": "/",
+
+
+"section_blogs_margin": "64px 64px",
+
+
+"section_blogs_margin_mb": "32px 32px",
+
+
+"hot_product_handle": "loa-khong-day-di-dong-sony-srs-xb13",
+
+
+"hot_product_coll": "hot-products",
+
+
+"hot_product_bg": "#f5a623",
+
+
+"hot_product_margin": "64px 64px",
+
+
+"hot_product_margin_mb": "32px 32px",
+
+
+"product_thumb_enabled": true,
+
+
+"buynow_enabled": true,
+
+
+"product_add_to_cart_enabled": true,
+
+
+"product_promotion_enabled": true,
+
+
+"product_policies_enabled": true,
+
+
+"product_coupons_enabled": true,
+
+
+"installment_type": "enabled_with_price",
+
+
+"installment_price": "5000000",
+
+
+"product_addtocart_content": "Thêm vào giỏ",
+
+
+"product_buynow_content": "Mua ngay",
+
+
+"product_promotion_heading": "Quà tặng khuyến mãi",
+
+
+"product_promotion_1_content": "1. Nhập mã EGANY thêm 5% đơn hàng",
+
+
+"product_promotion_2_content": "2. Giảm giá 10% khi mua từ 5 sản phẩm",
+
+
+"product_promotion_3_content": "3. Giảm giá 10% khi mua từ 5 sản phẩm",
+
+
+"product_promotion_4_content": "4. Tặng phiếu mua hàng khi mua từ 500k",
+
+
+"policy_product_1_enabled": true,
+
+
+"policy_product_1_title": "Giao hàng miễn phí trong 24h khu vực Hà Nội, Bắc Ninh, Bắc Giang ",
+
+
+"policy_product_2_enabled": true,
+
+
+"policy_product_2_title": "Trả góp lãi xuất ưu đãi qua thẻ tín dụng Visa, Master, JCB",
+
+
+"policy_product_3_enabled": true,
+
+
+"policy_product_3_title": "Đổi miễn phí trong 30 ngày",
+
+
+"limit_related_products": "4",
+
+
+"use_collection_alternative": true,
+
+
+"product_specifications_title": "Thông số kỹ thuật",
+
+
+"related_products_title": "Sản phẩm liên quan",
+
+
+"equalprice_heading": "Sản phẩm cùng phân khúc",
+
+
+"equalprice_from": "all",
+
+
+"equalprice_limit": "4",
+
+
+"product_recent_viewed_enabled": true,
+
+
+"use_product_review_tab": false,
+
+
+"related_product_enabled": true,
+
+
+"equalprice_product_enabled": true,
+
+
+"equalprice_percent": "50",
+
+
+"collection_main_banner_enabled": true,
+
+
+"collection_main_banner_url": "/collections/all",
+
+
+"collection_coupons_enabled": true,
+
+
+"collection_list_enabled": true,
+
+
+"collection_number_product": "12",
+
+
+"aside_filter_enabled": true,
+
+
+"filter_price": true,
+
+
+"filter_price_title": "Giá",
+
+
+"filter_price_node": "1000000;2000000;3000000;5000000;7000000;10000000",
+
+
+"filter_vendor": true,
+
+
+"filter_vendor_title": "Hãng sản xuất",
+
+
+"filter_type": true,
+
+
+"filter_type_title": "Loại sản phẩm",
+
+
+"filter_tag1": true,
+
+
+"filter_tag1_title": "Màu sắc",
+
+
+"filter_tag1_list": "Trắng; Đen; Xám; Xanh dương; Đỏ; Hồng; Tím; Xanh rêu; Kem; Bạc",
+
+
+"filter_tag2": true,
+
+
+"filter_tag2_title": "Tags",
+
+
+"filter_tag2_list": "Samsung;Điện thoại",
+
+
+"filter_price_order": "4",
+
+
+"filter_vendor_order": "1",
+
+
+"filter_type_order": "2",
+
+
+"filter_tag_order": "3",
+
+
+"collection__desc_enabled": true,
+
+
+"collection_desc_position": "bottom",
+
+
+"collection_desc_crop_enabled": true,
+
+
+"collection_desc_crop_limit": "168",
+
+
+"cart_empty_title": "Giỏ hàng chưa có gì!",
+
+
+"cart_empty_subtitle": "Hãy tìm sản phẩm ứng ý và thêm vào giỏ hàng bạn nhé",
+
+
+"cart_empty_cta": "Tiếp tục mua sắm",
+
+
+"cart_empty_cta_link": "/collections/all",
+
+
+"cart_policies_enabled": true,
+
+
+"cart_policies_1_enabled": true,
+
+
+"cart_policies_1_title": "Membership",
+
+
+"cart_policies_1_text": "Earn 10% back for the next order",
+
+
+"cart_coupon_enabled": false,
+
+
+"blogs_number_perpage": "12",
+
+
+"aside_category_blog_title": "Danh mục",
+
+
+"aside_category_blog_menu": "main-menu",
+
+
+"blogs_related_enable": true,
+
+
+"blogs_related_limit": "1",
+
+
+"blogs_aside_enabled": true,
+
+
+"blogs_related_title": "Bài viết liên quan",
+
+
+"blogs_aside_title": "TIN TỨC NỔI BẬT",
+
+
+"blogs_aside_url": "tin-tuc",
+
+
+"blogs_aside_limit": "1",
+
+
+"article_featured_image": true,
+
+
+"article_toc_used": true,
+
+
+"blogs_aside_tag_enabled": true,
+
+
+"blogs_aside_tag_title": "Tags",
+
+
+"blogs_related_enabled": true,
+
+
+"main_menu": "danh-muc-san-pham",
+
+
+"sub_menu": "main-menu",
+
+
+"menu_icon_1_enabled": true,
+
+
+"menu_icon_2_enabled": true,
+
+
+"sub_menu_enabled": true,
+
+
+"header_location_enabled": true,
+
+
+"header_location_link": "/pages/lien-he",
+
+
+"header_location_title": "CỬA HÀNG",
+
+
+"header_hotline_enabled": true,
+
+
+"header_hotline_title": "Hotline: <span>GỌI NGAY</span>",
+
+
+"add_cart_enabled": true,
+
+
+"hover_change_image_enabled": true,
+
+
+"reviews_enabled": false,
+
+
+"quickview_enabled": true,
+
+
+"home_section_1": "section-home-banner",
+
+
+"home_section_2": "section-policies",
+
+
+"home_section_3": "section-collection-list",
+
+
+"home_section_4": "section-flashsale",
+
+
+"home_section_5": "section-product-tabs-3",
+
+
+"home_section_6": "section-product-tabs-1",
+
+
+"home_section_7": "section-group-banner",
+
+
+"home_section_8": "none",
+
+
+"home_section_9": "section-product-tabs-2",
+
+
+"home_section_10": "section-hot-banner",
+
+
+"home_section_11": "none",
+
+
+"add_cart_variants": "quickview",
+
+
+"contactr_contact_maps": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6192.046980527724!2d106.10698576263185!3d21.266203122033644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31350d0dfb171189%3A0x5ccf1bc89e5fec9c!2sHim%20Lam%20Computer%20-%20B%E1%BA%AFc%20Giang!5e1!3m2!1svi!2s!4v1731495968625!5m2!1svi!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+
+
+"title_page": "",
+
+
+"policies_5_enabled": true,
+
+
+"policies_5_title": "HỖ TRỢ 24/7",
+
+
+"policies_5_text": "Hỗ trợ khách hàng 24/7",
+
+
+"coupon_3_enabled": false,
+
+
+"coupon_4_enabled": false,
+
+
+"coupon_3_text": "Mã: FREESHIPTHANG1",
+
+
+"coupon_3_code": "FREESHIPTHANG1",
+
+
+"coupon_3_desc": "Mã FREESHIP 99k cho đơn hàng tối thiểu 1 triệu. Tối đa 1 mã giảm giá/đơn hàng.",
+
+
+"coupon_4_text": "Mã: VALENTINE2025",
+
+
+"coupon_4_desc": "Giảm 15% cho đơn hàng giá trị tối thiểu 500k. Mã giảm tối đa 50K",
+
+
+"coupon_4_code": "VALENTINE2025",
+
+
+"flashsale_coupons_enabled": true,
+
+
+"flashsale_banner_type": "settings_banner",
+
+
+"faq_primary_color": "#ff3636",
+
+
+"faq_form_title": "Gửi thắc mắc cho chúng tôi",
+
+
+"faq_form_show": true,
+
+
+"faq_form_btn": "GỬI CHO CHÚNG TÔI",
+
+
+"faq_form_success": "Cám ơn bạn đã liên hệ! Chúng tôi sẽ trả lời ngay khi có thể",
+
+
+"store_locator_form_title": "Tìm cửa hàng",
+
+
+"store_locator_dist_label": "Chọn tỉnh thành",
+
+
+"store_locator_stores_label": "Tìm cửa hàng",
+
+
+"store_locator_address_label": "Địa chỉ",
+
+
+"store_locator_spreadsheet": "",
+
+
+"coll_3_title": "RAM",
+
+
+"coll_4_title": "Ổ CỨNG SSD, HDD",
+
+
+"coll_5_title": "NGUỒN MÁY TÍNH",
+
+
+"coll_6_title": "CARD ĐỒ HỌA",
+
+
+"coll_7_title": "MAINBOARD ",
+
+
+"coll_8_title": "MÀN HÌNH",
+
+
+"coll_9_title": "PHỤ KIỆN",
+
+
+"coll_10_title": "BÀN GHẾ",
+
+
+"coll_11_title": "GIÁ TREO MÀN HÌNH - ARM",
+
+
+"coll_12_title": "DỊCH VỤ SỬA CHỮA",
+
+
+"coll_13_title": "THIẾT BỊ CÔNG NGHỆ",
+
+
+"coll_14_title": "TẢN NHIỆT ",
+
+
+"coll_15_title": "GÓI DỰ ÁN",
+
+
+"coll_16_title": "MẸO CÔNG NGHỆ",
+
+
+"flashsale_countdown_type": "dates",
+
+
+"compare_product_enabled": true,
+
+
+"compare_product_page": "/pages/so-sanh-san-pham",
+
+
+"use_compare_product_overview": true,
+
+
+"compare_product_overview_heading": "Tổng quan",
+
+
+"use_compare_product_type": true,
+
+
+"compare_product_type_heading": "Loại sản phẩm",
+
+
+"use_compare_product_vendor": true,
+
+
+"compare_product_vendor_heading": "Nhà cung cấp",
+
+
+"use_compare_product_variants": true,
+
+
+"compare_product_variants_heading": "Biến thể",
+
+
+"use_compare_product_specifications": true,
+
+
+"use_compare_product_content": true,
+
+
+"compare_product_content_heading": "Mô tả",
+
+
+"cart_limit_enabled": false,
+
+
+"cart_limit": "5000000",
+
+
+"cart_limit_message": "Đơn hàng của bạn chưa đạt giá trị tối thiểu 5.000.000đ. \r\nVui lòng chọn mua thêm sản phẩm.",
+
+
+"vat_note_enabled": true,
+
+
+"vat_note": "Nhập mã giảm giá ở trang thanh toán",
+
+
+"cart_vat_enabled": true,
+
+
+"cart_vat_checkbox_text": "Xuất hóa đơn công ty",
+
+
+"cart_vat_company_label": "Tên công ty",
+
+
+"cart_vat_tax_code_label": "Mã số thuế",
+
+
+"cart_vat_tax_min": "10",
+
+
+"cart_vat_address_label": "Địa chỉ",
+
+
+"cart_vat_email_label": "Email",
+
+
+"product_share_enabled": true,
+
+
+"product_share_facebook_enabled": true,
+
+
+"product_share_messenger_enabled": true,
+
+
+"product_share_pinterest_enabled": true,
+
+
+"product_share_twitter_enabled": true,
+
+
+"newsletter_form_action": "https://egany.us11.list-manage.com/subscribe/post?u=5a58afacba94c1c4a94c354c9&id=2a7da1a514&f_id=000694e0f0",
+
+
+"use_frame_1": true,
+
+
+"promo_tag_type_2": "text-1",
+
+
+"promo_tag_2": "baohanh",
+
+
+"promo_tag_color_2": "#ffffff",
+
+
+"promo_tag_bg_2": "#4db957",
+
+
+"promo_tag_border_2": "#2c913a",
+
+
+"frame_1_coll": "lienquaniphone",
+
+
+"product_lightbox_enabled": true,
+
+
+"video_product_enabled": true,
+
+
+"video_play_button_pditem_enabled": true,
+
+
+"swatch_color_configs": "Xanh dương:#232fff\r\nHồng:#fe77f1\r\nĐen:#000000\r\nTrắng:#FFFFFF",
+
+
+"filter_search_list": "PC Gaming, Gear, Laptop",
+
+
+"search_categories_enabled": false,
+
+
+"search_category_menu": "main-menu",
+
+
+"search_product_enabled": true,
+
+
+"search_history_enabled": true,
+
+
+"flashsale_bg": "#f32513",
+
+
+"flashsale_timer_bg": "#ee1926",
+
+
+"flashsale_timer_color": "#ffffff",
+
+
+"flashsale_process_background": "#ee1926",
+
+
+"flashsale_title": "FLASH SALE ",
+
+
+"flashsale_coll": "flash-sale",
+
+
+"flashsale_coll_limit": "10",
+
+
+"flashsale_random_enabled": false,
+
+
+"flashsale_timer_enabled": true,
+
+
+"flashsale_not_started_label": "Chương trình sẽ bắt đầu sau",
+
+
+"flashsale_ongoing_label": "Nhanh lên nào! <br> <b>Sự kiện sẽ kết thúc sau</b>",
+
+
+"flashsale_ended_label": "Chương trình đã kết thúc",
+
+
+"flashsale_start_date": "27/03/2025 - 15:54:00",
+
+
+"flashsale_end_date": "30/03/2025 - 23:59:59",
+
+
+"flashsale_begin_date": "27/03/2025",
+
+
+"flashsale_start_time": "15:47:00",
+
+
+"flashsale_end_time": "23:59:59",
+
+
+"flashsale_day_1": true,
+
+
+"flashsale_day_2": true,
+
+
+"flashsale_day_3": true,
+
+
+"flashsale_day_4": true,
+
+
+"flashsale_day_5": true,
+
+
+"flashsale_day_6": true,
+
+
+"flashsale_day_0": true,
+
+
+"flashsale_not_started_action": "show",
+
+
+"flashsale_ended_action": "show",
+
+
+"flashsale_random_order_enabled": true,
+
+
+"flashsale_opening_text": "Vừa mở bán",
+
+
+"flashsale_sold_text": "Đã bán [soluongdaban] sản phẩm",
+
+
+"flashsale_run_out_soon_text": "Chỉ còn [soluongtonkho] sản phẩm",
+
+
+"flashsale_run_out_soon_qty": "10",
+
+
+"flashsale_show_quantity": false,
+
+
+"flashsale_percent_min": "10",
+
+
+"flashsale_percent_max": "300",
+
+
+"flashsale_1_title": "GIẢM GIÁ SOCK",
+
+
+"flashsale_1_coll": "flash-sale",
+
+
+"flashsale_1_start_date": "27/03/2025 - 15:52:00",
+
+
+"flashsale_1_end_date": "30/03/2025 - 14:00:00",
+
+
+"flashsale_2_title": "17/01 - 19/01",
+
+
+"flashsale_2_coll": "hot-products",
+
+
+"flashsale_2_start_date": "17/01/2024 - 15:00:00",
+
+
+"flashsale_2_end_date": "19/01/2024 - 22:00:00",
+
+
+"flashsale_3_start_date": "20/01/2024 - 11:00:00",
+
+
+"flashsale_3_end_date": "21/01/2024 - 23:00:00",
+
+
+"flashsale_3_title": "20/01 - 21/01",
+
+
+"flashsale_3_coll": "hot-products",
+
+
+"flashsale_1_enabled": true,
+
+
+"flashsale_3_enabled": false,
+
+
+"flashsale_2_enabled": false,
+
+
+"product_flashsale_color": "#ffffff",
+
+
+"product_flashsale_process_background": "#ffe500",
+
+
+"product_flashsale_bg": "#ee1926",
+
+
+"product_flashsale_timer_bg": "#fcfcfc",
+
+
+"product_flashsale_timer_color": "#000000",
+
+
+"coupon_3_date": "30/01/2025",
+
+
+"coupon_3_time": "20:18:00",
+
+
+"coupon_1_info": "",
+
+
+"cart_collection_title": "Sản phẩm gợi ý",
+
+
+"cart_collection_enabled": true,
+
+
+"cart_collection_limit": "8",
+
+
+"tag_related_products": "lienquan",
+
+
+"related_products_empty_message": "Sản phẩm đang được cập nhật",
+
+
+"delivery_enabled": true,
+
+
+"delivery_heading": "Hẹn giờ nhận hàng",
+
+
+"delivery_date_title": "Ngày nhận hàng",
+
+
+"delivery_time_title": "Thời gian nhận hàng",
+
+
+"delivery_time_default": "Chọn thời gian",
+
+
+"delivery_time": "08h00 - 12h00; 14h00 - 18h00; 19h00 - 21h00",
+
+
+"rewards_enabled": true,
+
+
+"rewards_unlocked_text": "Chúc mừng bạn đã đạt tất cả phần thưởng",
+
+
+"rewards_1_enabled": true,
+
+
+"rewards_1_title": "Mã giảm giá 50K",
+
+
+"rewards_1_coupon": "EGA50k",
+
+
+"rewards_1_text": "Bạn cần mua thêm [price] để được giảm 50k",
+
+
+"rewards_1_amount": "5000000",
+
+
+"rewards_2_enabled": true,
+
+
+"rewards_2_title": "Mã giảm giá 100k",
+
+
+"rewards_2_text": "Bạn cần mua thêm [price] để được giảm 100k",
+
+
+"rewards_2_coupon": "EGA100k",
+
+
+"rewards_2_amount": "15000000",
+
+
+"rewards_3_enabled": true,
+
+
+"rewards_3_title": "Mã giảm giá 150k",
+
+
+"rewards_3_text": "Bạn cần mua thêm [price] để được giảm 150k",
+
+
+"rewards_3_coupon": "EGA150k",
+
+
+"rewards_3_amount": "25000000",
+
+
+"rewards_color": "#ff7709",
+
+
+"top_banner_width": "1416",
+
+
+"top_banner_mb": true,
+
+
+"top_banner_enabled": false,
+
+
+"top_banner_alt": "top banner",
+
+
+"cro_enabled": true,
+
+
+"cro_add_cart_enabled": true,
+
+
+"cro_btn_1_position": "3",
+
+
+"cro_btn_1_title": "Khuyến mãi",
+
+
+"cro_btn_1_url": "/collections/all",
+
+
+"cro_btn_2_position": "4",
+
+
+"cro_btn_2_title": "Sản phẩm",
+
+
+"cro_btn_2_url": "/collections/all",
+
+
+"cro_btn_3_position": "3",
+
+
+"cro_btn_3_title": "Cửa hàng",
+
+
+"cro_btn_3_url": "/pages/lien-he",
+
+
+"cro_btn_mess_position": "2",
+
+
+"cro_btn_cart_enabled": true,
+
+
+"cro_btn_mess_url": "https://m.me/222222222",
+
+
+"cro_btn_hotline_title": "Gọi điện",
+
+
+"cro_btn_mess_title": "Nhắn tin",
+
+
+"top_banner_mb_width": "828",
+
+
+"top_banner_mb_height": "78",
+
+
+"swatch_color_label": "Color#Màu#Màu sắc",
+
+
+"swatch_size": "lg",
+
+
+"swatch_type": "image",
+
+
+"inventory_status_enabled": false,
+
+
+"inventory_count_enabled": false,
+
+
+"inventory_threshold": "2",
+
+
+"addThis_listSharing_enabled": true,
+
+
+"addthis_icon1_enabled": true,
+
+
+"addthis_icon1_tootlip": "Gọi ngay cho chúng tôi",
+
+
+"addthis_icon2_enabled": true,
+
+
+"addthis_icon2_tootlip": "Chat với chúng tôi qua Zalo",
+
+
+"zalo": "https://zalo.me/0347288399",
+
+
+"addthis_icon3_enabled": true,
+
+
+"page_id": "m.me/110104465508780",
+
+
+"backtotop_enabled": true,
+
+
+"cart_note_enabled": true,
+
+
+"cart_note_title": "Ghi chú đơn hàng",
+
+
+"sale_pop_enabled": false,
+
+
+"sale_pop_coll": "hot-products",
+
+
+"sale_pop_color": "#ee1926",
+
+
+"sale_pop_customer_gender": "",
+
+
+"sale_pop_desc": "Khách hàng [name] tại [address] vừa mua sản phẩm cách đây [time]",
+
+
+"flashsale_mobile_layout": "two-column",
+
+
+"banner_popup_enabled": true,
+
+
+"banner_popup_width": "520",
+
+
+"banner_popup_height": "640",
+
+
+"logo_width": "186",
+
+
+"top_banner_color": "#302a5b",
+
+
+"product_review_tab_enabled": true,
+
+
+"product_review_heading": "Đánh giá sản phẩm",
+
+
+"banner_popup_alt": "Click ngay để nhận ưu đãi hot!!",
+
+
+"tiktok_embed_code": "<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@him.lam.com/video/7505722617647664391\" data-video-id=\"7505722617647664391\" style=\"max-width: 605px;min-width: 325px;\" > <section> <a target=\"_blank\" title=\"@him.lam.com\" href=\"https://www.tiktok.com/@him.lam.com?refer=embed\">@him.lam.com</a> Chuyên mục tìm X dành cho ae không tìm được, vô vàn X chà bá 🤣 <a title=\"xuhuong\" target=\"_blank\" href=\"https://www.tiktok.com/tag/xuhuong?refer=embed\">#xuhuong</a> <a title=\"himlamcomputer\" target=\"_blank\" href=\"https://www.tiktok.com/tag/himlamcomputer?refer=embed\">#himlamcomputer</a> <a title=\"fy\" target=\"_blank\" href=\"https://www.tiktok.com/tag/fy?refer=embed\">#fy</a> <a target=\"_blank\" title=\"♬ nhạc nền  - Him Lam Conputer\" href=\"https://www.tiktok.com/music/nhạc-nền-Him-Lam-Conputer-7505722656537840400?refer=embed\">♬ nhạc nền  - Him Lam Conputer</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>",
+
+
+"tiktok_embed_margin": "64px 64px",
+
+
+"tiktok_embed_margin_mb": "20px 20px",
+
+
+"product_installment_content": "Mua trả góp",
+
+
+"type_related_products": "tag_collection",
+
+
+"sale_pop_delay": "60000",
+
+
+"product_review_title": "Đánh giá sản phẩm",
+
+
+"product_desc_title": "Đặc điểm nổi bật ",
+
+
+"product_desc_crop_limit": "200",
+
+
+"product_specifications_crop_limit": "200",
+
+
+"cro_btn_hotline_position": "1",
+
+
+"coupon_margin": "30px 30px",
+
+
+"product_tabs_1_margin": "64px 64px",
+
+
+"coll_1_link": "/collections/pc-setup-1",
+
+
+"coll_2_link": "/collections/vi-xu-ly-cpu-1",
+
+
+"coll_3_link": "/collections/bo-nho-trong-ram-1",
+
+
+"coll_4_link": "/collections/o-cung-luu-tru-ssd-hdd-1",
+
+
+"coll_5_link": "/collections/bo-cap-nguon-psu-1",
+
+
+"coll_6_link": "/collections/card-do-hoa-roi-vga-1",
+
+
+"coll_7_link": "/collections/bo-mach-chu-mainboard-1",
+
+
+"coll_8_link": "/collections/man-hinh-may-tinh-1",
+
+
+"coll_9_link": "/collections/phu-kien-1",
+
+
+"coll_10_link": "/collections/ban-ghe-may-tinh-1",
+
+
+"coll_11_link": "/collections/gia-treo-man-hinh-arm-1",
+
+
+"coll_12_link": "/collections/dich-vu-sua-chua-thi-cong",
+
+
+"coll_13_link": "/collections/thiet-bi-van-phong",
+
+
+"coll_14_link": "/collections/quat-tan-nhiet-1",
+
+
+"coll_15_link": "/collections/goi-du-an",
+
+
+"coll_16_link": "/blogs/news",
+
+
+"home_slider_1_url": "/collections/pc-setup-1",
+
+
+"home_slider_1_alt": "PC SETUP",
+
+
+"home_slider_2_url": "/collections/pc-gaming-intel-1",
+
+
+"home_slider_2_alt": "",
+
+
+"home_section_12": "section-product-tabs-4",
+
+
+"home_section_13": "section-tiktok-embed",
+
+
+"home_section_14": "section-brand",
+
+
+"home_section_15": "section-blogs",
+
+
+"product_tabs_2_title": "SẢN PHẨM NỔI BẬT",
+
+
+"product_tabs_2_limit": "18",
+
+
+"product_tabs_2_tab_1_enabled": true,
+
+
+"product_tabs_2_tab_2_enabled": true,
+
+
+"product_tabs_2_tab_3_enabled": true,
+
+
+"product_tabs_3_title": "LAPTOP GAMING - ĐỒ HỌA - VĂN PHÒNG",
+
+
+"product_tabs_4_title": "GAMING GEAR",
+
+
+"product_tabs_4_card": "row",
+
+
+"product_tabs_4_limit": "20",
+
+
+"product_tabs_4_tab_1_enabled": true,
+
+
+"product_tabs_4_tab_2_enabled": true,
+
+
+"product_tabs_4_tab_3_enabled": true,
+
+
+"product_tabs_4_tab_1_coll": "ban-phim-co-gaming-1",
+
+
+"product_tabs_4_tab_1_title": "BÀN PHÍM",
+
+
+"product_tabs_4_tab_2_title": "CHUỘT GAMING",
+
+
+"product_tabs_4_tab_2_coll": "chuot-may-tinh-1",
+
+
+"product_tabs_4_tab_3_title": "LOA MÁY TÍNH",
+
+
+"product_tabs_4_tab_3_coll": "loa-may-tinh-1",
+
+
+"product_tabs_1_margin_mb": "20px 20px",
+
+
+"product_tabs_2_margin": "64px 64px",
+
+
+"product_tabs_2_margin_mb": "20px 20px",
+
+
+"product_tabs_2_tab_1_title": "MAINBOARD",
+
+
+"product_tabs_2_tab_1_coll": "bo-mach-chu-mainboard-1",
+
+
+"product_tabs_2_tab_2_title": "CPU",
+
+
+"product_tabs_2_tab_2_coll": "vi-xu-ly-cpu-1",
+
+
+"product_tabs_2_tab_3_title": "RAM ",
+
+
+"product_tabs_2_tab_3_coll": "ram-pc",
+
+
+"product_tabs_3_limit": "18",
+
+
+"product_tabs_3_tab_1_enabled": true,
+
+
+"product_tabs_3_tab_1_title": "LAPTOP GAMING",
+
+
+"product_tabs_3_tab_1_coll": "laptop-gaming-1",
+
+
+"product_tabs_3_tab_2_enabled": true,
+
+
+"product_tabs_3_tab_2_title": "LAPTOP ĐỒ HỌA",
+
+
+"product_tabs_3_tab_2_coll": "laptop",
+
+
+"product_tabs_3_tab_3_enabled": true,
+
+
+"product_tabs_3_tab_3_title": "LAPTOP VĂN PHÒNG",
+
+
+"product_tabs_3_tab_3_coll": "laptop-van-phong-1",
+
+
+"product_tabs_3_margin": "64px 64px",
+
+
+"product_tabs_3_margin_mb": "20px 20px",
+
+
+"brand_2_link": "/search?q=DUAN&type=product",
+
+
+"brand_3_link": "/search?q=ASUS&type=product",
+
+
+"brand_3_alt": "brand-3",
+
+
+"brand_2_alt": "brand-2",
+
+
+"brand_4_alt": "brand-4",
+
+
+"brand_4_link": "/search?q=VIEWSONIC&type=product",
+
+
+"brand_5_link": "/search?q=SAMSUNG&type=product",
+
+
+"brand_5_alt": "brand-5",
+
+
+"brand_6_link": "/search?q=LG&type=product",
+
+
+"brand_6_alt": "brand-6",
+
+
+"brand_16_link": "/collections/all",
+
+
+"brand_15_link": "/collections/all",
+
+
+"brand_14_link": "/search?q=LENOVO&type=product",
+
+
+"brand_13_link": "/collections/card-do-hoa-roi-vga",
+
+
+"brand_12_link": "/collections/all",
+
+
+"brand_11_link": "/collections/all",
+
+
+"brand_10_link": "/collections/all",
+
+
+"brand_9_link": "/collections/all",
+
+
+"brand_8_link": "/search?q=GIGABYTE&type=product",
+
+
+"brand_7_link": "/search?q=AOC&type=product",
+
+
+"brand_7_alt": "brand-7",
+
+
+"brand_8_alt": "brand-8",
+
+
+"brand_9_alt": "brand-9",
+
+
+"brand_10_alt": "brand-10",
+
+
+"brand_11_alt": "brand-11",
+
+
+"brand_12_alt": "brand-12",
+
+
+"brand_13_alt": "brand-13",
+
+
+"brand_14_alt": "brand-14",
+
+
+"brand_15_alt": "brand-15",
+
+
+"brand_16_alt": "brand-16",
+
+
+"product_tabs_4_margin": "64px 64px",
+
+
+"main_menu_title": "DANH MỤC SẢN PHẨM",
+
+
+"menu_icon_3_enabled": true,
+
+
+"menu_icon_4_enabled": true,
+
+
+"menu_icon_5_enabled": true,
+
+
+"menu_icon_6_enabled": true,
+
+
+"menu_icon_7_enabled": true,
+
+
+"menu_icon_9_enabled": true,
+
+
+"menu_icon_8_enabled": true,
+
+
+"cart_collection": "hot-products",
+
+
+"flashsale_tabs_banner_width": "1416",
+
+
+"flashsale_tabs_banner_height": "442",
+
+
+"flashsale_tabs_banner_alt": "flash-sale",
+
+
+"flashsale_banner_width": "1416",
+
+
+"flashsale_banner_height": "442",
+
+
+"flashsale_banner_alt": "flash-sale",
+
+
+"home_side_banner_1_url": "/collections/may-tinh-de-ban",
+
+
+"home_side_banner_2_url": "/collections/laptop",
+
+
+"home_side_banner_3_url": "/collections/phu-kien-1",
+
+
+"home_slider_3_url": "/collections/pc-do-hoa-1",
+
+
+"home_slider_3_alt": "",
+
+
+"home_side_banner_1_alt": "",
+
+
+"home_side_banner_3_alt": "",
+
+
+"home_side_banner_2_alt": "",
+
+
+"top_banner_url": "/collections/all",
+
+
+"banner_popup_url": "/collections/all",
+
+
+"swatch_items_enabled": true,
+
+
+"hot_banner_mb_enabled": false,
+
+
+"hot_banner_mb_width": "828",
+
+
+"hot_banner_mb_height": "217",
+
+
+"menu_icon_1_enabled0": true,
+
+
+"menu_icon_1_enabled1": true,
+
+
+"menu_icon_1_enabled2": false,
+
+
+"menu_icon_1_enabled3": false,
+
+
+"menu_icon_1_enabled4": false,
+
+
+"logo_bct_enabled": true,
+
+
+"coupon_2_info": "",
+
+
+"coupon_3_info": "",
+
+
+"coupon_4_info": "",
+
+
+"coupon_5_enabled": false,
+
+
+"coupon_5_desc": "",
+
+
+"coupon_5_info": "",
+
+
+"coupon_6_enabled": false,
+
+
+"coupon_6_desc": "",
+
+
+"coupon_6_info": "",
+
+
+"coupon_7_enabled": false,
+
+
+"coupon_7_desc": "",
+
+
+"coupon_7_info": "",
+
+
+"coupon_8_enabled": false,
+
+
+"coupon_8_desc": "",
+
+
+"coupon_8_info": "",
+
+
+"product_promotion_5_content": "",
+
+
+"policy_product_4_enabled": false,
+
+
+"cart_policies_2_enabled": false,
+
+
+"cart_policies_2_text": "",
+
+
+"cart_policies_3_enabled": false,
+
+
+"cart_policies_3_text": "",
+
+
+"cart_policies_4_enabled": false,
+
+
+"cart_policies_4_text": "",
+
+
+"flashsale_tabs_coupons_enabled": false,
+
+
+"use_frame_2": false,
+
+
+"use_frame_3": false,
+
+
+"customer_layout": "theme",
+
+
+"favicon.png": "",
+
+
+"share_fb_home.jpg": "",
+
+
+"primary_color": "#04645e",
+
+
+"secondary_color": "#dd1b43",
+
+
+"foreground_color": "#333333",
+
+
+"link_color": "#094eff",
+
+
+"price_color": "#ee1926",
+
+
+"compare_price_color": "#999999",
+
+
+"sale_bg_color": "#ee1926",
+
+
+"sale_color": "#fffbff",
+
+
+"addtocart_color": "#ffffff",
+
+
+"buynow_color": "#ffffff",
+
+
+"buynow_bg_color": "#fdd7d7",
+
+
+"color_1_c": "",
+
+
+"cro-btn-1-icon.png": "",
+
+
+"cro-btn-2-icon.png": "",
+
+
+"cro-btn-3-icon.png": "",
+
+
+"cro-btn-hotline-icon.png": "",
+
+
+"cro-btn-mess-icon.png": "",
+
+
+"cro-btn-cart-icon.png": "",
+
+
+"banner-popup-img.png": "",
+
+
+"logo.png": "",
+
+
+"logo_height": "",
+
+
+"top_banner.jpg": "",
+
+
+"top_banner_height": "",
+
+
+"top_banner_mb.jpg": "",
+
+
+"default-menu-icon.png": "",
+
+
+"menu_icon_1.png": "",
+
+
+"menu_icon_2.png": "",
+
+
+"menu_icon_3.png": "",
+
+
+"menu_icon_4.png": "",
+
+
+"menu_icon_5.png": "",
+
+
+"menu_icon_6.png": "",
+
+
+"menu_icon_7.png": "",
+
+
+"menu_icon_8.png": "",
+
+
+"menu_icon_9.png": "",
+
+
+"menu_icon_10.png": "",
+
+
+"menu_icon_11.png": "",
+
+
+"menu_icon_12.png": "",
+
+
+"menu_icon_13.png": "",
+
+
+"menu_icon_14.png": "",
+
+
+"header_hotline_link": "0347288399",
+
+
+"logo-footer.png": "",
+
+
+"logo-bct.png": "",
+
+
+"logo_bct_url": "http://online.gov.vn/Home/WebDetails/128574",
+
+
+"logo_bct_alt": "",
+
+
+"footer-trustbadge.png": "",
+
+
+"facebook.png": "",
+
+
+"zalo.png": "",
+
+
+"instagram.png": "",
+
+
+"youtube.png": "",
+
+
+"tiktok.png": "",
+
+
+"home_section_16": "none",
+
+
+"home_slider_1.jpg": "",
+
+
+"home_slider_2.jpg": "",
+
+
+"home_slider_3.jpg": "",
+
+
+"home_side_banner_1.jpg": "",
+
+
+"home_side_banner_2.jpg": "",
+
+
+"home_side_banner_3.jpg": "",
+
+
+"home_slider_margin": "",
+
+
+"home_slider_margin_mobile": "",
+
+
+"policies_icon_1.png": "",
+
+
+"policies_icon_2.png": "",
+
+
+"policies_icon_3.png": "",
+
+
+"policies_icon_4.png": "",
+
+
+"policies_icon_5.png": "",
+
+
+"policies_margin_mb": "",
+
+
+"coll_1.png": "",
+
+
+"coll_2.png": "",
+
+
+"coll_3.png": "",
+
+
+"coll_4.png": "",
+
+
+"coll_5.png": "",
+
+
+"coll_6.png": "",
+
+
+"coll_7.png": "",
+
+
+"coll_8.png": "",
+
+
+"coll_9.png": "",
+
+
+"coll_10.png": "",
+
+
+"coll_11.png": "",
+
+
+"coll_12.png": "",
+
+
+"coll_13.png": "",
+
+
+"coll_14.png": "",
+
+
+"coll_15.png": "",
+
+
+"coll_16.png": "",
+
+
+"coupon_1_text_short": "",
+
+
+"coupon_1_link": "",
+
+
+"coupon_2_text_short": "",
+
+
+"coupon_2_time": "23:59:59",
+
+
+"coupon_2_link": "",
+
+
+"coupon_3_text_short": "",
+
+
+"coupon_3_link": "",
+
+
+"coupon_4_text_short": "",
+
+
+"coupon_4_date": "14/02/2025",
+
+
+"coupon_4_time": "23:59:59",
+
+
+"coupon_4_link": "",
+
+
+"coupon_5_text": "",
+
+
+"coupon_5_text_short": "",
+
+
+"coupon_5_code": "",
+
+
+"coupon_5_date": "",
+
+
+"coupon_5_time": "",
+
+
+"coupon_5_link": "",
+
+
+"coupon_6_text": "",
+
+
+"coupon_6_text_short": "",
+
+
+"coupon_6_code": "",
+
+
+"coupon_6_date": "",
+
+
+"coupon_6_time": "",
+
+
+"coupon_6_link": "",
+
+
+"coupon_7_text": "",
+
+
+"coupon_7_text_short": "",
+
+
+"coupon_7_code": "",
+
+
+"coupon_7_date": "",
+
+
+"coupon_7_time": "",
+
+
+"coupon_7_link": "",
+
+
+"coupon_8_text": "",
+
+
+"coupon_8_text_short": "",
+
+
+"coupon_8_code": "",
+
+
+"coupon_8_date": "",
+
+
+"coupon_8_time": "",
+
+
+"coupon_8_link": "",
+
+
+"coupon_margin_mb": "",
+
+
+"banner_group_1.jpg": "",
+
+
+"banner_group_2.jpg": "",
+
+
+"banner_group_3.jpg": "",
+
+
+"hot_banner.png": "",
+
+
+"hot_banner_width": "",
+
+
+"hot_banner_height": "",
+
+
+"hot_banner_mb.png": "",
+
+
+"brand_1.png": "",
+
+
+"brand_2.png": "",
+
+
+"brand_3.png": "",
+
+
+"brand_4.png": "",
+
+
+"brand_5.png": "",
+
+
+"brand_6.png": "",
+
+
+"brand_7.png": "",
+
+
+"brand_8.png": "",
+
+
+"brand_9.png": "",
+
+
+"brand_10.png": "",
+
+
+"brand_11.png": "",
+
+
+"brand_12.png": "",
+
+
+"brand_13.png": "",
+
+
+"brand_14.png": "",
+
+
+"brand_15.png": "",
+
+
+"brand_16.png": "",
+
+
+"product_tabs_1_card": "grid",
+
+
+"product_tabs_2_card": "grid",
+
+
+"product_tabs_3_card": "grid",
+
+
+"product_tabs_4_margin_mb": "",
+
+
+"section_blogs_tab_2_url": "news",
+
+
+"flashsale_icon.png": "",
+
+
+"flashsale_random_min": "",
+
+
+"flashsale_random_max": "",
+
+
+"flashsale_margin": "",
+
+
+"flashsale_margin_mb": "",
+
+
+"tiktok-embed-bg.jpg": "",
+
+
+"product_installment_link": "",
+
+
+"policy_product_image_1.png": "",
+
+
+"policy_product_image_2.png": "",
+
+
+"policy_product_image_3.png": "",
+
+
+"policy_product_4_title": "",
+
+
+"policy_product_image_4.png": "",
+
+
+"equalprice_empty_message": "",
+
+
+"collection_main_banner.jpg": "",
+
+
+"collection_banner_width": "",
+
+
+"collection_banner_height": "",
+
+
+"collection_main_banner_alt": "",
+
+
+"filter_tag1_order": "",
+
+
+"filter_tag2_order": "",
+
+
+"add_to_cart_action": "drawer",
+
+
+"cart_empty_background.png": "",
+
+
+"cart_policies_image_1.png": "",
+
+
+"cart_policies_2_title": "",
+
+
+"cart_policies_image_2.png": "",
+
+
+"cart_policies_3_title": "",
+
+
+"cart_policies_image_3.png": "",
+
+
+"cart_policies_4_title": "",
+
+
+"cart_policies_image_4.png": "",
+
+
+"article_toc_heading": "h2,h3",
+
+
+"flashsale_banner.jpg": "",
+
+
+"flashsale_banner_link": "",
+
+
+"flashsale_tabs_banner_type": "settings_banner",
+
+
+"flashsale_tabs_banner.jpg": "",
+
+
+"flashsale_tabs_banner_link": "",
+
+
+"promo_tag_type_1": "none",
+
+
+"promo_tag_1": "",
+
+
+"promo_tag_1.png": "",
+
+
+"promo_tag_color_1": "",
+
+
+"promo_tag_bg_1": "",
+
+
+"promo_tag_border_1": "",
+
+
+"promo_tag_2.png": "",
+
+
+"promo_tag_type_3": "none",
+
+
+"promo_tag_3": "",
+
+
+"promo_tag_3.png": "",
+
+
+"promo_tag_color_3": "",
+
+
+"promo_tag_bg_3": "",
+
+
+"promo_tag_border_3": "",
+
+
+"frame_1.png": "",
+
+
+"frame_1_scale": "",
+
+
+"frame_2.png": "",
+
+
+"frame_2_scale": "",
+
+
+"frame_2_coll": "",
+
+
+"frame_3.png": "",
+
+
+"frame_3_coll": "",
+
+
+"frame_3_scale": "",
+
+
+"404.jpg": "",
+
+
+"coll_png": "",
+
+
+"brand_png": "",
+
+
+"promotion_hrvapp_use": false,
+
+
+"promotion_hrvapp": "appcombo",
+
+
+"combo_icon": "",
+
+
+"combo_icon_qickview": "",
+
+
+"combo_text_qickview": "",
+
+
+"reviews_app": "easyreview",
+
+
+"copyright_content": "",
+
+
+"wishlist_enabled": false,
+
+
+"wishlist_page_url": "/pages/wishlist",
+
+
+"flashsale-icon.png": "",
+
+
+"flashsale_banner.png": "",
+
+
+"flashsale_tabs_banner.png": "",
+
+
+"flashsale_url": "/collections/flash-sale",
+
+
+"header_color_bkg": "#ffffff",
+
+
+"header_color_text": "#000000",
+
+
+"header_03_topbar_bkg": "#f8e71c",
+
+
+"header_03_topbar_text": "#000000",
+
+
+"header_03_color_bkg": "#f8e71c",
+
+
+"header_03_color_text": "#000000",
+
+
+"header_home_selected": "header_style1",
+
+
+"base_font": "Roboto Condensed",
+
+
+"menu_icon_10_enabled": true,
+
+
+"menu_icon_11_enabled": true,
+
+
+"menu_icon_12_enabled": true,
+
+
+"menu_icon_13_enabled": true,
+
+
+"menu_icon_14_enabled": false
+
+},
+
+"presets": {}
+}
